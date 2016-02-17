@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <title>Tesla Spectre</title>    
+    
+    <!-- SEO meta -->
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Tesla Spectre" />
+    <!-- End SEO meta -->
+
+    <!-- IE meta -->
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- End IE meta -->
+   
+    <!-- Apple meta -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Tesla Spectre" />
+    <!-- End Apple meta -->
+
+    <!-- Mobile meta -->
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <!-- End mobile meta -->
+
+    <!-- Facebook meta -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content=""/>
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <!-- End Facebook meta -->
+
+    <!-- Twitter meta -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:image" content="" />
+    <!-- End Twitter meta -->
+    
+    <!-- build:css -->
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <!-- endbuild -->
+  </head>
+  
+  <body>
+
+    <main id="main"></main>
+
+    <!-- build:js -->
+    <script src="js/dist/vendor.js"></script> 
+    <script src="js/dist/template.js"></script> 
+    <script src="js/dist/app.js"></script> 
+    <!-- endbuild -->
+
+    <script>
+
+      var app = {};
+
+      $(document).ready(function(){
+        app = new App();
+
+        (function tick(){
+          app.update();
+          window.requestAnimationFrame(tick);
+        })();
+
+      });
+
+    </script>
+
+  </body>
+</html>

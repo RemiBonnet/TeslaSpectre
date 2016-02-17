@@ -1,0 +1,23 @@
+// Body
+html, body {
+	width: 100%;
+
+	-moz-osx-font-smoothing: grayscale;
+	 -webkit-font-smoothing: antialiased;
+			-moz-font-smoothing: antialiased;
+			 -ms-font-smoothing: antialiased;
+					 font-smoothing: antialiased;
+}
+
+// Common
+@import "common/fonts";
+@import "common/vars.scss";
+@import "common/components";
+
+@import "common/loader";
+@import "common/header";
+@import "common/footer";
+
+// Views
+@import "views/home";
+@import "views/experience";
