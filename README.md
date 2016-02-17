@@ -13,5 +13,5 @@ Redesign dashboard Tesla with spectre movie.
 
 
 # Install
-create virtualhost : test.dev
-(sudo) npm install
+- create virtualhost : test.dev
+- (sudo) npm install
