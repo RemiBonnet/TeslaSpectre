@@ -6,7 +6,7 @@
   "client": "HETIC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pierre-rossignol/starter-h3.git"
+    "url": "https://github.com/RemiBonnet/TeslaSpectre.git"
   },
   "devDependencies": {
     "bluebird": "^2.9.34",
