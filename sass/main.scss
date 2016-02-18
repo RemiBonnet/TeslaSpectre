@@ -9,9 +9,12 @@ html, body {
 					 font-smoothing: antialiased;
 }
 
+// Vendors
+@import "vendors/normalize/normalize";
+
 // Common
 @import "common/fonts";
-@import "common/vars.scss";
+@import "common/vars";
 @import "common/components";
 
 @import "common/loader";

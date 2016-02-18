@@ -1,1 +1,50 @@
 // FONTS
+
+@font-face {
+	font-family: "Avenir";
+	src: url('/assets/fonts/avenir.ttc');
+}
+
+@font-face {
+	font-family: "BrandonBold";
+	src: url('/assets/fonts/Brandon_bld.otf');
+}
+
+@font-face {
+	font-family: "BrandonBlack";
+	src: url('/assets/fonts/Brandon_blk.otf');
+}
+
+@font-face {
+	font-family: "BrandonMedium";
+	src: url('/assets/fonts/Brandon_med.otf');
+}
+
+
+@font-face {
+	font-family: "BrandonLight";
+	src: url('/assets/fonts/Brandon_light.otf');
+}
+
+
+@mixin fontAvenir() {
+	font-family: 'Avenir';
+}
+
+@mixin fontBrandonBold() {
+	font-family: 'BrandonBold';
+}
+
+@mixin fontBrandonBlack() {
+	font-family: 'BrandonBlack';
+}
+
+@mixin fontBrandonMedium() {
+	font-family: 'BrandonMedium';
+}
+
+@mixin fontBrandonLight() {
+	font-family: 'BrandonLight';
+}
+
+
