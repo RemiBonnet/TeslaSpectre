@@ -29,22 +29,27 @@
 
 @mixin fontAvenir() {
 	font-family: 'Avenir';
+	text-transform: uppercase;
 }
 
 @mixin fontBrandonBold() {
 	font-family: 'BrandonBold';
+	text-transform: uppercase;
 }
 
 @mixin fontBrandonBlack() {
 	font-family: 'BrandonBlack';
+	text-transform: uppercase;
 }
 
 @mixin fontBrandonMedium() {
 	font-family: 'BrandonMedium';
+	text-transform: uppercase;
 }
 
 @mixin fontBrandonLight() {
 	font-family: 'BrandonLight';
+	text-transform: uppercase;
 }
 
 

@@ -1,14 +1,3 @@
-// Body
-html, body {
-	width: 100%;
-
-	-moz-osx-font-smoothing: grayscale;
-	 -webkit-font-smoothing: antialiased;
-			-moz-font-smoothing: antialiased;
-			 -ms-font-smoothing: antialiased;
-					 font-smoothing: antialiased;
-}
-
 // Vendors
 @import "vendors/normalize/normalize";
 

@@ -1,12 +1,45 @@
 section#home{
+	width: 1200px;
 	video {
 	  position: absolute;
 	  top: 0;
 	  left: 0;
 	  z-index: -10;
 	}
-	p {
-		color: red;
+	div.content {
+		padding-top: 150px;
+		width: 1200px;
+		position: relative;
+		text-align:center;
+		color: $gray-m;
+		top: 100%;
+  		transform: translateY(100%);
+		font-size: 40px;
 		@include fontAvenir();
+   		font-weight:800;
+		span {
+			animation: 4s animate;
+  			display: inline-block;
+  			&:nth-child(6) {
+  				margin-left: 50px;
+  			}
+  			&:nth-child(10) {
+  				margin-left: 50px;
+  			}
+		}
 	}
+	a {
+		cursor: pointer;
+		position:absolute;
+  		top: 50%;
+  		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		width: 200px;
+		height: 200px;
+	}
+}
+
+@keyframes animate {
+	0% { opacity: 0; }
+  	100% { opacity: 1; }
 }

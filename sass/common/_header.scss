@@ -1,3 +1,61 @@
 header{
-	
+	width: 1200px;
+	div.top {
+		height: 36px;
+		background-image: url("../assets/img/bar-top.png");
+	}
+	nav {
+		background-color: $gray-b;
+		height: 114px;
+		hr {
+			height: 93px;
+			display: inline-block;
+			border: 0px;
+			border-left: 1px solid $gray-m;
+		}
+		a {	
+			width: 149px;
+			display: inline-block;
+			text-align: center;
+			text-decoration: none;
+		 	&.gps, &.eco, &.web, &.phone {
+				svg {
+					text-align:center;
+					fill: $gray-m;
+					padding-bottom: 30px;
+				}
+			}
+			&.exp {
+				svg {
+					fill: $gray-l;
+					padding-bottom: 30px;
+				}
+			}
+			&.music {
+				svg {
+					padding-bottom: 30px;
+					g {
+						fill: $gray-m;
+					}
+				}
+			}
+			&.missions {
+				width:244px;
+				svg {
+					overflow: hidden;
+					fill: $gray-m;
+					padding-bottom: 10px;
+
+					-webkit-filter: drop-shadow( 0px 0px 30px $gray-l );
+            		filter: drop-shadow( 0px 0px 30px $gray-l );
+				}
+				&:active {
+					svg {
+						fill: $gray-l;
+					}
+				}
+			}
+		}
+	}
 }
+

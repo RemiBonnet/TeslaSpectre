@@ -1,3 +1,142 @@
 footer{
-	
+	position: absolute;
+	bottom:0;
+	width: 1200px;
+	height: 220px;
+	background-color: $black;
+	.block {
+		display: inline-block;
+		vertical-align: bottom;
+		margin-top: 20px;
+		background-color: $gray-r;
+		width: 125px;
+		height: 180px;
+		text-align:center;
+		text-decoration: none;
+		&.controls {
+			margin-left: 25px;
+			p {
+				margin-top: 0px;
+				@include fontAvenir();
+				padding-top: 8px;
+				color: $gray-m;
+				font-weight: bold;
+				text-transform: uppercase;
+				margin-bottom: 0px;
+				font-size: 15px;
+			}
+			svg {
+				position: relative;
+				top: 30px;
+				height: 100px;
+				width: 126px;
+				fill: $gray-l;
+			}
+		}
+		&.heat {
+			margin-left: 10px;
+			background-color: $gray-b;
+			p {
+				margin-top: 0px;
+				@include fontAvenir();
+				padding-top: 8px;
+				color: $gray-m;
+				font-weight: bold;
+				text-transform: uppercase;
+				margin-bottom: 0px;
+				font-size: 15px;
+				padding-bottom: 8px;
+				&:nth-child(1){
+					background-color: $gray-r;
+				}
+				&.number {
+					margin-right: 5px;
+					height: auto;
+					font-size: 12px;
+					padding: 0px;
+					text-align: right;
+					&:nth-child(4){
+						margin-top: 33px;
+					}
+				}
+			}
+			svg {
+		        -webkit-transform: scaleX(-1);
+		        transform: scaleX(-1);
+		        filter: FlipH;
+		        -ms-filter: "FlipH";
+
+				position: relative;
+				top: 14px;
+				fill: $gray-l;
+				width: 60px;
+				height: auto;
+			}
+		}
+		&.temp {
+			margin-left: 10px;
+			background-color: $gray-b;
+			p {
+				margin-top: 0px;
+				@include fontAvenir();
+				padding-top: 8px;
+				color: $gray-m;
+				font-weight: bold;
+				text-transform: uppercase;
+				margin-bottom: 0px;
+				font-size: 15px;
+				padding-bottom: 8px;
+				&:nth-child(1){
+					background-color: $gray-r;
+				}
+				&.number {
+					margin-right: 5px;
+					height: auto;
+					font-size: 12px;
+					padding: 0px;
+					text-align: right;
+					&:nth-child(4){
+						margin-top: 33px;
+					}
+				}
+				&.counter {
+					@include fontBrandonLight();
+					line-height: 65px;
+					height:74px;
+					line-height: 74px;
+					padding: 0px;
+					color: $green;
+					font-size: 30pt;
+					&:after {
+						vertical-align: top;
+						line-height: 55px;
+						font-size: 9pt;
+						content:'°F';
+						width: 10px;
+						height: 10px;
+					}	
+				}
+			}
+			button {
+				background-color: $black;
+				border: 0px;
+				text-align: center;
+				width: 95px;
+				height: 25px;
+				&:nth-child(2){
+					margin-top: 10px;
+				}
+				svg {
+					vertical-align: middle;
+					stroke: $gray-l;
+					height: 17px;
+					width: 17px;
+				}
+			}			
+		}
+		&.center {
+			width: 290px;
+			height: 180px;
+		}
+	}
 }

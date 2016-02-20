@@ -1,5 +1,5 @@
 module.exports = {
-	vhost: "starter-front.dev",
+	vhost: "tesla.dev",
 	scripts: {
 		app: ['js/app/views/view.js', 'js/app/**/*.js'],
 		vendors: ['js/vendor/jquery/jquery.min.js', 'js/vendor/signals/signals.min.js', 'js/vendor/**/*.js'],
