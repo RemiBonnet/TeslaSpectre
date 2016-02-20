@@ -86,6 +86,17 @@ Router.prototype.createRoutes = function() {
 
     });
 
+    // Missions
+    crossroads.addRoute( '/missions' , function(){
+
+        self._onNavigate.dispatch({
+            view: 'missions'
+        });
+
+        console.log( '## Navigate view missions' );
+
+    });
+
 };
 
 // Navigate
