@@ -10,6 +10,12 @@
 @import "common/header";
 @import "common/footer";
 
+section {
+	background-image: url("../assets/img/pattern.png");
+	width: 1200px;
+	height: 1920px;
+}
+
 // Views
 @import "views/home";
 @import "views/experience";
