@@ -8,10 +8,6 @@ var Experience = function(){
 
 Experience.prototype = Object.create(View.prototype);
 
-Experience.prototype.bind = function() {
-	this.incDec();
-};
-
 Experience.prototype.animateIn = function() {
 	
 	View.prototype.animateIn.call(this);
@@ -37,21 +33,3 @@ Experience.prototype.animateOut = function() {
 	});
 
 };
-
-Experience.prototype.incDec = function() {
-	var counter = 88;
-
-	$(".counter").text(counter);
-
-	$(".add").click(function() {
-		counter = counter + 1;
-  		$(".counter").text(counter);
-	});
-
-	$(".subtract").click(function() {
-	  counter = counter - 1;
-	  $(".counter").text(counter);
-	});
-};
-
-

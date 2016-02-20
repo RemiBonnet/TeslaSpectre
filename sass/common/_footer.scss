@@ -60,7 +60,7 @@ footer{
 					}
 				}
 			}
-			svg {
+			svg.left {
 		        -webkit-transform: scaleX(-1);
 		        transform: scaleX(-1);
 		        filter: FlipH;
@@ -73,7 +73,7 @@ footer{
 				height: auto;
 			}
 		}
-		&.temp {
+		&.tempLeft {
 			margin-left: 10px;
 			background-color: $gray-b;
 			p {
@@ -99,9 +99,8 @@ footer{
 						margin-top: 33px;
 					}
 				}
-				&.counter {
+				&.counterLeft {
 					@include fontBrandonLight();
-					line-height: 65px;
 					height:74px;
 					line-height: 74px;
 					padding: 0px;
@@ -135,8 +134,197 @@ footer{
 			}			
 		}
 		&.center {
+			margin-left: 10px;
 			width: 290px;
 			height: 180px;
+			p {
+				text-align: center;
+				margin-bottom: 8px;
+				margin-top: 0px;
+				text-transform: uppercase;
+				font-size: 15px;
+				color: $gray-m;
+			}
+			a {
+				width: 139px;
+				font-size: 15px;
+				text-transform: uppercase;
+				display: block;
+				line-height: 30px;
+				color: $black;
+				text-decoration: none;
+				height: 31px;
+			}
+			div.left {
+				display: inline-block;
+				width: 139px;
+				svg:nth-child(1){
+					height: 70px;
+					width: 51px;
+					fill: $gray-l;
+				}
+				svg:nth-child(3){
+					height: 35px;
+					width: 35px;
+					fill: $orange;
+					margin-bottom: 6px;
+					margin-top: 6px;
+				}
+				a {
+					background-color: $orange;
+				}
+			}
+			div.right {
+				display: inline-block;
+				width: 139px;
+				svg:nth-child(1){
+					margin-bottom: 16px;
+					margin-top: 16px;
+					height: 38px;
+					width: 35px;
+					fill: $gray-l;
+				}
+				svg:nth-child(3){
+					height: 35px;
+					width: 35px;
+					fill: $green;
+					margin-bottom: 6px;
+					margin-top: 6px;
+				}
+				a {
+					background-color: $green;
+				}
+			}
+		}
+		&.tempRight {
+			margin-left: 10px;
+			background-color: $gray-b;
+			p {
+				margin-top: 0px;
+				@include fontAvenir();
+				padding-top: 8px;
+				color: $gray-m;
+				font-weight: bold;
+				text-transform: uppercase;
+				margin-bottom: 0px;
+				font-size: 15px;
+				padding-bottom: 8px;
+				&:nth-child(1){
+					background-color: $gray-r;
+				}
+				&.number {
+					margin-right: 5px;
+					height: auto;
+					font-size: 12px;
+					padding: 0px;
+					text-align: right;
+					&:nth-child(4){
+						margin-top: 33px;
+					}
+				}
+				&.counterRight {
+					@include fontBrandonLight();
+					height:74px;
+					line-height: 74px;
+					padding: 0px;
+					color: $green;
+					font-size: 30pt;
+					&:after {
+						vertical-align: top;
+						line-height: 55px;
+						font-size: 9pt;
+						content:'°F';
+						width: 10px;
+						height: 10px;
+					}	
+				}
+			}
+			button {
+				background-color: $black;
+				border: 0px;
+				text-align: center;
+				width: 95px;
+				height: 25px;
+				&:nth-child(2){
+					margin-top: 10px;
+				}
+				svg {
+					vertical-align: middle;
+					stroke: $gray-l;
+					height: 17px;
+					width: 17px;
+				}
+			}			
+		}
+		&.heat {
+			svg.right {
+				position: relative;
+				top: 14px;
+				fill: $gray-l;
+				width: 60px;
+				height: auto;
+			}
+		}
+		&.volume {
+			margin-left: 10px;
+			background-color: $gray-r;
+			p {
+				margin-top: 0px;
+				@include fontAvenir();
+				padding-top: 8px;
+				color: $gray-m;
+				font-weight: bold;
+				text-transform: uppercase;
+				margin-bottom: 0px;
+				font-size: 15px;
+				padding-bottom: 8px;
+				&:nth-child(1){
+					background-color: $gray-r;
+				}
+				&.number {
+					margin-right: 5px;
+					height: auto;
+					font-size: 12px;
+					padding: 0px;
+					text-align: right;
+					&:nth-child(4){
+						margin-top: 33px;
+					}
+				}
+				&.counterVolume {
+					@include fontBrandonLight();
+					height:74px;
+					line-height: 74px;
+					padding: 0px;
+					color: $green;
+					font-size: 30pt;
+					&:after {
+						text-transform: lowercase;
+						vertical-align: top;
+						line-height: 55px;
+						font-size: 9pt;
+						content:'dB';
+						width: 10px;
+						height: 10px;
+					}	
+				}
+			}
+			button {
+				background-color: $black;
+				border: 0px;
+				text-align: center;
+				width: 95px;
+				height: 25px;
+				&:nth-child(2){
+					margin-top: 10px;
+				}
+				svg {
+					vertical-align: middle;
+					stroke: $gray-l;
+					height: 17px;
+					width: 17px;
+				}
+			}			
 		}
 	}
 }

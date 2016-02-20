@@ -148,6 +148,7 @@ View.prototype.bind = function() {
 	// Bind resize event
 	app._onResize.add(this.resize, this);
 
+	this.incDec();
 };
 
 // Once view is animated in
@@ -187,3 +188,54 @@ View.prototype.onAnimateOut = function() {
 	this._onAnimateOut.dispatch();
 
 };
+
+View.prototype.incDec = function() {
+
+	// TemperatureLeft
+	var counterLeft = 88;
+
+	$(".counterLeft").text(counterLeft);
+
+	$(".addLeft").click(function() {
+		counterLeft = counterLeft + 1;
+  		$(".counterLeft").text(counterLeft);
+	});
+
+	$(".subtractLeft").click(function() {
+	  counterLeft = counterLeft - 1;
+	  $(".counterLeft").text(counterLeft);
+	});
+
+	// TemperatureRight
+
+	var counterRight = 84;
+
+	$(".counterRight").text(counterRight);
+
+	$(".addRight").click(function() {
+		counterRight = counterRight + 1;
+  		$(".counterRight").text(counterRight);
+	});
+
+	$(".subtractRight").click(function() {
+	  counterRight = counterRight - 1;
+	  $(".counterRight").text(counterRight);
+	});
+
+	// Volume
+
+	var counterVolume = 72;
+
+	$(".counterVolume").text(counterVolume);
+
+	$(".addVolume").click(function() {
+		counterVolume = counterVolume + 1;
+  		$(".counterVolume").text(counterVolume);
+	});
+
+	$(".subtractVolume").click(function() {
+	  counterVolume = counterVolume - 1;
+	  $(".counterVolume").text(counterVolume);
+	});
+};
+
