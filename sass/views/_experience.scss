@@ -1,5 +1,8 @@
 section#experience{
 	article.gps {
-		width: 370px;
+		#map {
+ 			width: 750px;
+            height: 500px;
+		}
 	}
 }
