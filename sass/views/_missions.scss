@@ -1,3 +1,99 @@
 section#missions {
-
+  width: 1200px;
+  background-color: $black;
+  @include fontAvenir();
+  #profile {
+    width: 1160px;
+    height: 691px;
+    margin-left: 20px;
+    .profile-title {
+      height: 34px;
+      width: 444px;
+      background-color: $gray-b;
+      color: $gray-l;
+      margin-bottom: 15px;
+      p {
+        margin-left: 12px;
+        line-height: 38px;
+        vertical-align: middle;
+        font-size: 20px;
+        letter-spacing: .075em;
+      }
+    }
+    .informations {
+      .localisation-title{
+        //          position: absolute;
+        margin-left: 51+392px;
+        color: $gray-l;
+        background-color: $gray-b;
+        height: 34px;
+        width: 720px;
+        p{
+          @include fontAvenir();
+          line-height: 38px;
+          vertical-align: middle;
+          margin-top: -2px;
+          margin-right: 12px;
+          font-size: 20px;
+          float: right;
+        }
+      }
+      .card {
+        margin-top: -34px;
+        .name{
+          position: absolute;
+          width: 165px;
+          height: 45px;
+          margin-top: 10px;
+          background-color: $black;
+          color: $white;
+          font-size: 43px;
+          line-height: 50px;
+          vertical-align: middle;
+          letter-spacing: .075em;
+          text-align: center;
+        }
+        .warning{
+          position:absolute;
+          background-color: $orange;
+          width: 245px;
+          height: 28px;
+          margin-left: 51px;
+          margin-top: 495px;
+          @include fontAvenir();
+          font-size: 16px;
+          letter-spacing: .075em;
+          text-align: center;
+          font-weight: bolder;
+          line-height: 28px;
+          vertical-align: middle;
+        }
+        img {
+          margin-left: 51px;
+          width: 392px;
+          height: auto;
+        }
+        .card-infos{
+          background-color: $gray-b;
+          margin-top: -6px;
+          margin-left: 51px;
+          height: 111px;
+          width: 392px;
+          .infos-list{
+            @include fontAvenir();
+            margin-top: 22px;
+            width: 208px;
+            position: absolute;
+            color: $white;
+            font-size: 13px;
+            .info-name{
+              float:left;
+              display: inline;
+              color: $gray-l;
+            }
+          }
+        }
+      }
+    }
+  }
 }
