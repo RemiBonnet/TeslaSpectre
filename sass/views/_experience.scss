@@ -206,6 +206,7 @@ section#experience{
 			height: 372px;
 			display: inline;
 			p.title{
+				font-weight: 600;
 				font-size: 20px;
 				padding-left: 30px;
 				text-transform: uppercase;
@@ -220,7 +221,7 @@ section#experience{
 				margin-right: -30px;
 				font-size: 15px;
 				color: $gray-l;
-				width: 275px;
+				width: 263px;
 				height: 45px;
 				text-align: left;
 				display: block;
@@ -240,7 +241,7 @@ section#experience{
 			}
 			hr {
 				opacity: 0.2;
-				width: 273px;
+				width: 263px;
 				margin-left: 10px;
 			}
 			div.addresse {
@@ -268,7 +269,8 @@ section#experience{
 		margin-left: 20px;
 		width: 535px;
 		height: 270px;
-		p{
+		p {						
+			font-weight: 400;
 			font-size: 20px;
 			color:$white;
 			margin-bottom: 0px;
@@ -301,7 +303,7 @@ section#experience{
 							padding-right: 10px;
 							font-size: 17px;
 						}
-						&:nth-child(2){
+						&:nth-child(2) {
 							padding-bottom: 10px;
 							padding-left: 10px;
 							padding-right: 10px;
@@ -355,7 +357,8 @@ section#experience{
 		margin-left: 0px;
 		width: 535px;
 		height: 270px;
-		p {
+		p.title {
+			font-weight: 400;
 			font-size: 20px;
 			color:$white;
 			margin-bottom: 0px;
@@ -363,14 +366,17 @@ section#experience{
 				color: $green;
 			}
 		}
-		div.left {
+		div.agendaLeft {
+			float: left;
 			width: 250px;
-			display: inline-block;
 			a {
 				display: block;
 				width: 250px;
 				text-decoration: none;
 				height: auto;
+				&:nth-child(1){
+					margin-top: 40px;
+				}
 				&:active {
 					background-color: $gray-b;
 				}
@@ -381,26 +387,159 @@ section#experience{
 				}
 				p.time {
 					@include fontBrandonBold();
-					margin-top: 20px;
 					color: $gray-m;
 					font-size: 15px;
-					line-height: 27px;
-					height: 42px;
+					line-height: 35px;
+					height: 50px;
 					width: 50px;
+					&:nth-child(2) {
+						margin-top: 0px;
+						margin-bottom: 0px;
+					}
 				}
 				p.info {
 					color: $gray-l;
 					float: right;
 					width: 200px;
 				}
+				.center {
+					margin-bottom: 0px;
+					margin-top: 0px;
+				}
 			}
 		}
-		div.right {
-			display: inline-block;
-			width: 282px;
-			height: 289px;
+		div.agendaRight {
+			float: right;
+			width: 262px;
+			height: 200px;
 			display: block;
+			margin-right: 20px;
 			background-color: $gray-b;
+			p {
+				line-height: 25px;
+				text-transform: uppercase;
+				font-size: 18px;
+				margin-left: 16px;
+				span {
+					padding-left: 20px;
+					font-weight: 300;
+					line-height: 14px;
+					font-size: 14px;
+				}
+				&.title {
+					margin-top: 13px;
+					font-weight: 600;
+					color: $gray-l;
+				}
+				&.localisation {
+					margin-top: 0px;
+					margin-bottom: 0px;
+					color: $gray-m;
+					font-weight: 600;
+					font-size: 17px;
+					margin-bottom: 0px;
+					&:nth-child(2) {
+						position: relative;
+						bottom: 15px;
+					}
+					svg {
+						position: relative;
+						top: 4px;
+						padding-top: 20px;
+						padding-right: 18px;
+						fill: $gray-m;
+					}
+				}
+				&.time {
+					position: relative;
+					bottom: 38px;
+				}
+				&.adresse {
+					margin-top: 0px;
+					color: $gray-m;
+					padding-left: 38px;
+					font-weight: 300;
+					line-height: 16px;
+					font-size: 13px;
+					position: relative;
+					bottom: 15px;
+				}
+			}
+			a.open {
+				position: relative;
+				bottom: 30px;
+				font-weight: 700;
+				display: block;
+				width: 262px;
+				line-height: 50px;
+				height: 50px;
+				font-size: 13px;
+				text-align: center;
+				text-transform: uppercase;
+				text-decoration: none;
+				color: $gray-m;
+				border-top: 2px solid $black;
+				background-color: $gray-b;
+				svg {
+					fill: $gray-m;
+					position: relative;
+					top: 7px;
+					padding-left: 2px;
+				}
+			}
+			a.leftButton {
+				display: inline-block;
+				position: relative;
+				bottom: 27px;
+				font-size: 20px;
+				color: $gray-m;
+				text-align: center;
+				line-height: 42px;
+				text-transform: uppercase;
+				text-decoration: none;
+				background-color: $green;
+				height: 40px;
+				width: 145px;
+				width: 50%;
+			}
+			a.rightButton {
+				float: right;
+				display: inline-block;
+				position: relative;
+				bottom: 27px;
+				font-size: 20px;
+				color: $gray-l;
+				text-align: center;
+				line-height: 42px;
+				text-transform: uppercase;
+				text-decoration: none;
+				background-color: $black;
+				height: 40px;
+				width: 145px;
+				width: 50%;
+			}
+		}
+	}
+	article.energy {
+		margin-top: 85px;
+		width: 535px;
+		height: 270px;
+		padding-left: 20px;
+		p.title {
+			text-transform: uppercase;
+			font-weight: 400;
+			font-size: 20px;
+			color:$white;
+			margin-bottom: 0px;
+			span {
+				color: $green;
+			}
+		}
+		div.graph {
+			background-image: url("../assets/img/energy/graph.png");
+			background-size: cover;
+			width: 876px;
+			height: 305px;
 		}
 	}
 	@keyframes changeOpacity{
