@@ -148,7 +148,6 @@ View.prototype.bind = function() {
 	// Bind resize event
 	app._onResize.add(this.resize, this);
 
-	this.incDec();
 };
 
 // Once view is animated in
@@ -157,6 +156,8 @@ View.prototype.onAnimateIn = function() {
 	// Dispatch onAnimateIn event
 	this._onAnimateIn.dispatch();
 
+	this.incDec();
+	
 };
 
 // Animate view out

@@ -14,7 +14,7 @@ footer{
 		text-align:center;
 		text-decoration: none;
 		&.controls {
-			margin-left: 25px;
+			margin-left: 20px;
 			p {
 				margin-top: 0px;
 				@include fontAvenir();
@@ -117,7 +117,7 @@ footer{
 				}
 			}
 			button {
-				background-color: $black;
+				background-color: $gray-r;
 				border: 0px;
 				text-align: center;
 				width: 95px;
@@ -135,7 +135,7 @@ footer{
 		}
 		&.center {
 			margin-left: 10px;
-			width: 290px;
+			width: 325px;
 			height: 180px;
 			p {
 				text-align: center;
@@ -146,18 +146,18 @@ footer{
 				color: $gray-m;
 			}
 			a {
-				width: 139px;
+				width: 156px;
 				font-size: 15px;
 				text-transform: uppercase;
 				display: block;
 				line-height: 30px;
 				color: $black;
 				text-decoration: none;
-				height: 31px;
+				height: 30px;
 			}
 			div.left {
-				display: inline-block;
-				width: 139px;
+				float: left;
+				width: 156px;
 				svg:nth-child(1){
 					height: 70px;
 					width: 51px;
@@ -175,8 +175,8 @@ footer{
 				}
 			}
 			div.right {
-				display: inline-block;
-				width: 139px;
+				float: right;
+				width: 156px;
 				svg:nth-child(1){
 					margin-bottom: 16px;
 					margin-top: 16px;
@@ -240,7 +240,7 @@ footer{
 				}
 			}
 			button {
-				background-color: $black;
+				background-color: $gray-r;
 				border: 0px;
 				text-align: center;
 				width: 95px;
@@ -310,7 +310,7 @@ footer{
 				}
 			}
 			button {
-				background-color: $black;
+				background-color: $gray-b;
 				border: 0px;
 				text-align: center;
 				width: 95px;
