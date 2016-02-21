@@ -79,6 +79,10 @@ template {
   display: none;
 }
 
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
 /* Links
    ========================================================================== */
 

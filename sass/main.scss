@@ -10,6 +10,10 @@
 @import "common/header";
 @import "common/footer";
 
+body {
+	background-color: black;
+}
+
 section {
 	background-image: url("../assets/img/pattern.png");
 	width: 1200px;

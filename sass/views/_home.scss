@@ -12,7 +12,6 @@ section#home{
 		position: relative;
 		text-align:center;
 		color: $gray-m;
-		top: 100%;
   		transform: translateY(100%);
 		font-size: 40px;
 		@include fontAvenir();
