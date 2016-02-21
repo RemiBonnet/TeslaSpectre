@@ -1,8 +1,428 @@
 section#experience{
 	article.gps {
-		#map {
- 			width: 750px;
-            height: 500px;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 26px;
+		div#map {
+ 			width: 1160px;
+            height: 370px;
+            div.gmnoprint {
+            	display: none;
+            }
+			a[href^="http://maps.google.com/maps"]{display:none !important}
+			a[href^="https://maps.google.com/maps"]{display:none !important}
+			.gmnoprint a, .gmnoprint span, .gm-style-cc {
+			    display:none;
+			}
+			.gmnoprint div {
+			    background:none !important;
+			}
+		}
+		div.dot {
+			position: absolute;
+			left: 472px;
+			top: 335px;
+			background-color: rgba(248, 155, 0, 0.8);
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			border: 2px solid rgba(255, 255, 255, 0.8);
+			
+			animation-name: changeOpacity, changeScale;
+	      	animation-iteration-count: infinite, infinite;
+	      	animation-duration: 1.5s, 1.5s;
+			div.inner {
+				box-shadow: 0px 1px 1px $black;
+				position: relative;
+				left: 40%;
+				top: 40%;
+				width: 15px;
+				height: 15px;
+				border-radius: 50%;
+				background-color: #f2241d;
+			}
+		}
+
+		div.blocLeft {
+			z-index: 9999;
+			position: absolute;
+			top: 182px;
+			left: 25px;
+			background-color: $gray-r;
+			width: 254px;
+			height: 352px;
+			display: inline;
+			div.top {
+				display: block;
+				text-align: center;
+				padding-top: 25px;
+				background-color: $gray-b;
+			}
+			div.left {
+				float: left;
+				height: 117px;
+				width: 45px;
+				display: block;
+				text-align: center;
+				div.dotFirst {
+					margin-top: 6px !important;
+					margin: 0 auto;
+					margin-bottom: 6px;
+					display: block;
+					border: 2px solid $gray-l;
+					border-radius: 50%;
+					width: 5px;
+					height: 5px;
+					margin-bottom: 8px;
+				}
+				div.dotLeft {
+					margin: 0 auto;
+					margin-bottom: 5px;
+					display: block;
+					background-color: $gray-l;
+					border-radius: 50%;
+					width: 5px;
+					height: 5px;
+				}
+				svg {
+					fill: $gray-l;
+				}
+			}
+			div.center {
+				width: 0px;
+				height: 117px;
+	 			form {
+					input {
+						font-size: 15px;
+						color: $gray-l;
+						width: 150px;
+						margin-top: 25px;
+						text-align: left;
+						display: block;
+						margin: 0 auto;
+						padding-bottom: 10px;
+						border-bottom: 1px solid $gray-l;
+						border-top: 0px;
+						border-left: 0px;
+						border-right: 0px;
+						background-color: transparent;
+						&:nth-child(2){
+							padding-top: 27px;
+						}
+						&::-webkit-input-placeholder {
+							color: $gray-l;
+						}
+					}
+				}
+			}
+			div.right {
+				float: right;
+				width: 45px;
+				height: 117px;
+				img {
+					padding-top: 27px;
+					width: 70%;
+					height: auto;
+				}
+				svg {
+					margin-top: -3px;
+					fill: #7b787b;
+				}
+			}
+			div.bottom {
+				p {
+					text-transform: uppercase;
+					text-align: center;
+					color: $gray-m;
+					padding-right: 30px;
+					margin-bottom: 5px;
+					&:nth-child(1){
+						font-size: 18px;
+					}
+					&:nth-child(2){
+						margin-top: 0px;
+						padding-right: 90px;
+						font-size: 13px;
+					}
+					&:nth-child(3){
+						color: $white;
+						margin-top: 17px;
+						padding-right: 42px;
+						font-size: 13px;
+						svg {
+							padding-right: 5px;
+							height: 25px;
+							vertical-align: middle;
+						}
+					}
+					&:nth-child(4){
+						color: $gray-l;
+						margin-top: 0px;
+						padding-right: 42px;
+						font-size: 13px;
+						svg {
+							height: 25px;
+							padding-left: 15px;
+							padding-right: 5px;
+							vertical-align: middle;
+						}
+					}
+					&:nth-child(5) {
+						color: $gray-l;
+						margin-top: 0px;
+						padding-right: 42px;
+						font-size: 13px;
+						svg {
+							height: 25px;
+							padding-left: 5px;
+							padding-right: 5px;
+							vertical-align: middle;
+						}
+					}
+					&:nth-child(6) {
+						color: $gray-l;
+						margin-top: 0px;
+						font-size: 13px;
+						padding-right: 17px;
+						svg {
+							height: 25px;
+							padding-right: 5px;
+							vertical-align: middle;
+						}
+					}
+					span {
+						color: $orange;
+					}
+				}
+			}
+		}
+		div.blocRight {
+			z-index: 9999;
+			position: absolute;
+			top: 175px;
+			left: 907px;
+			background-color: $black;
+			width: 275px;
+			height: 372px;
+			display: inline;
+			p.title{
+				font-size: 20px;
+				padding-left: 30px;
+				text-transform: uppercase;
+				color: $white;
+			}
+			input {
+				background-image: url("../assets/img/home_icons/ic_search_black_48px.svg");
+    			background-repeat: no-repeat;
+    			background-position: right;
+    			background-size: 15%;
+				margin-left: 10px;
+				margin-right: -30px;
+				font-size: 15px;
+				color: $gray-l;
+				width: 275px;
+				height: 45px;
+				text-align: left;
+				display: block;
+				border: 0px;
+				background-color: $gray-b;
+				&::-webkit-input-placeholder {
+					color: $gray-l;
+					padding-left: 20px;
+				}
+			}
+			p.recents{
+				padding-top:3px;
+				font-size: 13px;
+				padding-left: 10px;
+				text-transform: uppercase;
+				color: $gray-m;
+			}
+			hr {
+				opacity: 0.2;
+				width: 273px;
+				margin-left: 10px;
+			}
+			div.addresse {
+				p.street {
+					margin-top: 14px;
+					font-size: 14pt;
+					padding-left: 10px;
+					text-transform: uppercase;
+					color: $gray-l;
+					margin-bottom: 0px;
+				}
+				p.city {
+					margin-bottom: 14px;
+					margin-top: 5px;
+					font-size: 11pt;
+					padding-left: 10px;
+					text-transform: uppercase;
+					color: $gray-m;
+				}
+			}
 		}
 	}
+	article.player {
+		display: inline-block;
+		margin-left: 20px;
+		width: 535px;
+		height: 270px;
+		p{
+			font-size: 20px;
+			color:$white;
+			margin-bottom: 0px;
+			span {
+				color: $orange;
+			}
+		}
+		div.content {
+			margin-top: -45px;
+			div.cover {
+				display: inline-block;
+				background-image: url("../assets/img/cover/smith.png");
+				background-size: cover;
+				width: 250px;
+				height: 250px;
+				div.title {
+					width: 223px;
+					position: relative; 
+					left: 159px;
+					top: 17px;
+					background-color: $gray-r;
+					p {
+						text-transform: uppercase;
+						margin: 0px;
+						&:nth-child(1) {
+							text-align: right;
+							font-weight: 100;
+							padding-top: 10px;
+							padding-left: 10px;
+							padding-right: 10px;
+							font-size: 17px;
+						}
+						&:nth-child(2){
+							padding-bottom: 10px;
+							padding-left: 10px;
+							padding-right: 10px;
+							font-size: 13px;
+							text-align: right;
+						}
+					}
+				}
+			}
+			div.play {
+				position: relative;
+				top: 140px;
+				left: 15px;
+				width: 200px;
+				height: 250px;
+				display: inline-block;
+				div.top {
+					display: block;
+					text-align: center;
+					svg {
+						display: inline-block;
+						fill: $gray-l;
+						&:nth-child(2) {
+							fill: $white;
+						}
+					}
+				}
+				div.bottom {
+					display: block;
+					text-align: center;
+					svg {
+						display: inline-block;
+						fill: $gray-l;
+						&:nth-child(1) {
+							padding-right: 15px;
+							width: 26px;
+							height: 30px;
+						}
+						&:nth-child(2) {
+							width: 26px;
+							height: 31px;
+							fill: $orange;
+						}
+					}
+				}
+			}
+		}
+	}
+	article.agenda {
+		float: right;
+		margin-left: 0px;
+		width: 535px;
+		height: 270px;
+		p {
+			font-size: 20px;
+			color:$white;
+			margin-bottom: 0px;
+			span {
+				color: $green;
+			}
+		}
+		div.left {
+			width: 250px;
+			display: inline-block;
+			a {
+				display: block;
+				width: 250px;
+				text-decoration: none;
+				height: auto;
+				&:active {
+					background-color: $gray-b;
+				}
+				p {
+					display: inline-block;
+					text-transform: uppercase;
+					font-size: 16px;
+				}
+				p.time {
+					@include fontBrandonBold();
+					margin-top: 20px;
+					color: $gray-m;
+					font-size: 15px;
+					line-height: 27px;
+					height: 42px;
+					width: 50px;
+				}
+				p.info {
+					color: $gray-l;
+					float: right;
+					width: 200px;
+				}
+			}
+		}
+		div.right {
+			display: inline-block;
+			width: 282px;
+			height: 289px;
+			display: block;
+			background-color: $gray-b;
+		}
+	}
+	@keyframes changeOpacity{
+        0%{
+          background-color: rgba(248, 155, 0, 0.8);
+        }
+        50%{
+          background-color: rgba(248, 155, 0, 0.5);
+        }
+        100%{
+          background-color: rgba(248, 155, 0, 0.8);
+        }
+    }
+	@keyframes changeScale{
+        0%{
+          transform: scale(1);
+        }
+        50%{
+          transform: scale(1.1);
+        }
+        100%{
+          transform: scale(1);
+        }
+    }
 }

@@ -41,10 +41,10 @@ Experience.prototype.maps = function() {
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
-        zoom: 11,
+        zoom: 14,
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(40.6700, -73.9400), // New York
+        center: new google.maps.LatLng(48.8637447, 2.4315409), // Montreuil
 
         // How you would like to style the map. 
         // This is where you would paste any style found on Snazzy Maps.
@@ -60,8 +60,6 @@ Experience.prototype.maps = function() {
 
     // Let's also add a marker while we're at it
     var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(40.6700, -73.9400),
-        map: map,
-        title: 'Snazzy!'
+        position: new google.maps.LatLng(40.6700, -73.9400)
     });
 };
