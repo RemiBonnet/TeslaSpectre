@@ -24,7 +24,8 @@ section#missions {
     .informations {
       background-image: url('../assets/img/missions/map_missions.png');
       background-size: cover;
-      backgroud-postion: 50% 50%;
+      backgroud-position: 50% 50%;
+      height: 642px;
       .localisation-title{
         //          position: absolute;
         margin-left: 51+392px;
@@ -100,8 +101,34 @@ section#missions {
       }
     }
   }
+  #warning-imminent{
+    opacity: 0;
+    width: 1160px;
+    height: 48px;
+    margin-left: 20px;
+    position: absolute;
+    z-index: 10;
+    color: $white;
+    background-color: $red;
+    text-align: center;
+    animation: warningAnimation 1.5s infinite;
+    span{
+      @include fontAvenir();
+      font-size: 32px;
+      font-weight: bold;
+      letter-spacing: .075em;
+      width: 1160px;
+      line-height: 48px;
+      vertical-align: middle;
+    }
+    @keyframes warningAnimation {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  }
   #mission{
-    margin-top: 24px;
+    margin-top: 29px;
     margin-left: 20px;
     .details{
       width: 670px;
