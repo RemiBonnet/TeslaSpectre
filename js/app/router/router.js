@@ -53,16 +53,27 @@ Router.prototype.createRoutes = function() {
 
 	});
 
-	// Experience
-	crossroads.addRoute( '/experience' , function(){
+    // Experience
+    crossroads.addRoute( '/experience' , function(){
 
-		self._onNavigate.dispatch({
-			view: 'experience'
-		});
+        self._onNavigate.dispatch({
+            view: 'experience'
+        });
 
-		console.log( '## Navigate view experience' );
+        console.log( '## Navigate view experience' );
 
-	});
+    });
+
+    // Music
+    crossroads.addRoute( '/music' , function(){
+
+        self._onNavigate.dispatch({
+            view: 'music'
+        });
+
+        console.log( '## Navigate view music' );
+
+    });
 
 };
 
