@@ -75,6 +75,17 @@ Router.prototype.createRoutes = function() {
 
     });
 
+    // Navigate
+    crossroads.addRoute( '/navigate' , function(){
+
+        self._onNavigate.dispatch({
+            view: 'navigate'
+        });
+
+        console.log( '## Navigate view navigate' );
+
+    });
+
 };
 
 // Navigate

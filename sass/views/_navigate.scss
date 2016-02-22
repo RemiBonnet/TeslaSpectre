@@ -1,0 +1,302 @@
+section#navigate {
+	article.navigate {
+		padding-left: 20px;
+		p.title {
+		    padding-top: 30px;
+		    @include fontAvenir();
+		    font-size: 20px;
+		    color: $white;
+		    font-weight:bold;
+		    span {
+		    	color: $orange;
+		    }
+		}
+		div.leftNavigate {
+			float: left;
+			div.first {
+				background-color: $gray-r;
+				width: 80px;
+				height: 90px;
+				svg {
+					padding-top: 15px;
+					display: block;
+					margin: 0 auto;
+					width: 34px;
+					height: 34px;
+				}
+				.st0 {
+					fill: $orange;
+				}
+				p {
+					@include fontAvenir();
+					text-align: center;
+					font-size: 11px;
+					text-transform: uppercase;
+					color: $orange;
+				}
+			}
+			div.second {
+				margin-top: 3px;
+				background-color: $gray-b;
+				width: 80px;
+				height: 90px;
+				svg {
+					padding-top: 15px;
+					display: block;
+					margin: 0 auto;
+					width: 34px;
+					height: 34px;
+				}
+				p {
+					@include fontAvenir();
+					text-align: center;
+					font-size: 11px;
+					text-transform: uppercase;
+					color: $gray-l;
+				}
+			}
+			div.three {
+				margin-top: 3px;
+				background-color: $gray-b;
+				width: 80px;
+				height: 90px;
+				svg {
+					padding-top: 15px;
+					display: block;
+					margin: 0 auto;
+					width: 34px;
+					height: 34px;
+				}
+				p {
+					@include fontAvenir();
+					text-align: center;
+					font-size: 11px;
+					text-transform: uppercase;
+					color: $gray-l;
+				}
+			}
+		}
+		div#mapsNavigate {
+			float: right;
+			width: 1065px;
+	        height: 590px;
+	        margin-right: 20px;
+	        div.gmnoprint {
+	        	display: none;
+	        }
+			a[href^="http://maps.google.com/maps"]{display:none !important}
+			a[href^="https://maps.google.com/maps"]{display:none !important}
+			.gmnoprint a, .gmnoprint span, .gm-style-cc {
+			    display:none;
+			}
+			.gmnoprint div {
+			    background:none !important;
+			}
+		}
+		div.dot {
+			position: absolute;
+			left: 700px;
+			top:500px;
+			background-color: rgba(248, 155, 0, 0.8);
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			border: 2px solid rgba(255, 255, 255, 0.8);
+			
+			animation-name: changeOpacity, changeScale;
+	      	animation-iteration-count: infinite, infinite;
+	      	animation-duration: 1.5s, 1.5s;
+			div.inner {
+				box-shadow: 0px 1px 1px $black;
+				position: relative;
+				left: 40%;
+				top: 40%;
+				width: 15px;
+				height: 15px;
+				border-radius: 50%;
+				background-color: #f2241d;
+			}
+		}
+		div.blocLeft {
+			z-index: 9999;
+			position: absolute;
+			top: 340px;
+			left: 134px;
+			background-color: $gray-r;
+			width: 300px;
+			height: 400px;
+			display: inline;
+			div.top {
+				display: block;
+				text-align: center;
+				padding-top: 25px;
+				background-color: $gray-b;
+			}
+			div.left {
+				float: left;
+				height: 117px;
+				width: 70px;
+				display: block;
+				text-align: center;
+				div.dotFirst {
+					margin-top: 6px !important;
+					margin: 0 auto;
+					margin-bottom: 6px;
+					display: block;
+					border: 2px solid $gray-l;
+					border-radius: 50%;
+					width: 5px;
+					height: 5px;
+					margin-bottom: 8px;
+				}
+				div.dotLeft {
+					margin: 0 auto;
+					margin-bottom: 5px;
+					display: block;
+					background-color: $gray-l;
+					border-radius: 50%;
+					width: 5px;
+					height: 5px;
+				}
+				svg {
+					fill: $gray-l;
+				}
+			}
+			div.center {
+				width: 0px;
+				height: 117px;
+	 			form {
+					input {
+						font-size: 18px;
+						color: $gray-l;
+						width: 150px;
+						margin-top: 25px;
+						text-align: left;
+						display: block;
+						margin: 0 auto;
+						padding-bottom: 10px;
+						border-bottom: 1px solid $gray-l;
+						border-top: 0px;
+						border-left: 0px;
+						border-right: 0px;
+						background-color: transparent;
+						&:nth-child(2){
+							padding-top: 27px;
+						}
+						&::-webkit-input-placeholder {
+							color: $gray-l;
+						}
+					}
+				}
+			}
+			div.right {
+				float: right;
+				width: 45px;
+				height: 117px;
+				img {
+					padding-top: 27px;
+					width: 70%;
+					height: auto;
+				}
+				svg {
+					margin-top: -3px;
+					fill: #7b787b;
+				}
+			}
+			div.bottom {
+				p {
+					text-transform: uppercase;
+					text-align: center;
+					color: $gray-m;
+					padding-right: 30px;
+					margin-bottom: 10px;
+					&:nth-child(1){
+						font-size: 20px;
+					}
+					&:nth-child(2){
+						margin-top: 0px;
+						padding-right: 90px;
+						font-size: 16px;
+					}
+					&:nth-child(3){
+						color: $white;
+						margin-top: 17px;
+						padding-right: 42px;
+						font-size: 16px;
+						svg {
+							padding-right: 5px;
+							height: 25px;
+							vertical-align: middle;
+						}
+					}
+					&:nth-child(4){
+						color: $gray-l;
+						margin-top: 0px;
+						padding-right: 32px;
+						font-size: 16px;
+						svg {
+							height: 25px;
+							padding-left: 15px;
+							padding-right: 5px;
+							vertical-align: middle;
+						}
+					}
+					&:nth-child(5) {
+						color: $gray-l;
+						margin-top: 0px;
+						padding-right: 35px;
+						font-size: 16px;
+						svg {
+							height: 25px;
+							padding-left: 5px;
+							padding-right: 5px;
+							vertical-align: middle;
+						}
+					}
+					&:nth-child(6) {
+						color: $gray-l;
+						margin-top: 0px;
+						font-size: 16px;
+						padding-right: 1px;
+						svg {
+							height: 25px;
+							padding-right: 5px;
+							vertical-align: middle;
+						}
+					}
+					span {
+						color: $orange;
+					}
+				}
+			}
+		}
+		div.bottomNavigate {
+			position: relative;
+			top: 10px;
+			left: 95px;
+			a {
+				line-height: 45px;
+				display: inline-block;
+				font-size: 14px;
+				text-decoration: none;
+				color: $white;
+				text-align: center;
+				background-color: $gray-b;
+				&:nth-child(1){
+					height: 45px;
+					width: 127px;
+				}
+				&:nth-child(2) {
+					color: $orange;
+					height: 45px;
+					width: 70px;
+				}
+				&:nth-child(3){
+					height: 45px;
+					width: 83px;
+				}
+			}
+		}
+
+	}
+}
