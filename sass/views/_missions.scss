@@ -91,10 +91,18 @@ section#missions {
             position: absolute;
             color: $white;
             font-size: 13px;
+            text-align: right;
+            list-style-type: none;
             .info-name{
               float:left;
               display: inline;
               color: $gray-l;
+              text-align: right;
+            }
+            .info-value{
+              display: inline;
+              text-align: left;
+              margin-left: 40px;
             }
           }
         }
@@ -106,6 +114,7 @@ section#missions {
     width: 1160px;
     height: 48px;
     margin-left: 20px;
+    margin-top: 25px;
     position: absolute;
     z-index: 10;
     color: $white;
@@ -128,7 +137,7 @@ section#missions {
     }
   }
   #mission{
-    margin-top: 29px;
+    margin-top: 29+48px;
     margin-left: 20px;
     .details{
       width: 670px;
@@ -420,7 +429,7 @@ section#missions {
     width: 1160px;
     height: 199px;
     margin-left: 20px;
-    margin-top: 548px;
+    margin-top: 548+48px;
     .weapon-left{
       width: 470px;
       height: inherit;
@@ -441,6 +450,8 @@ section#missions {
       width: 225px;
       height: inherit;
       background-image: url('../assets/img/missions/missile.png');
+      background-size: 108% 108%;
+      background-position: 50% 50%;
       margin-top: -199px;
       margin-left: 473px;
     }
