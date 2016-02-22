@@ -96,4 +96,19 @@ Experience.prototype.incDec = function() {
       counterPressureRight = counterPressureRight - 0.1;
       $(".counterPressureRight").text(counterPressureRight);
     });
+
+    // Elevation
+    var counterPressureBot = 5.9;
+
+    $(".counterPressureBot").text(counterPressureBot);
+
+    $(".addPressureBot").click(function() {
+        counterPressureBot = counterPressureBot + 0.1;
+        $(".counterPressureBot").text(counterPressureBot);
+    });
+
+    $(".subtractPressureBot").click(function() {
+      counterPressureBot = counterPressureBot - 0.1;
+      $(".counterPressureBot").text(counterPressureBot);
+    });
 }

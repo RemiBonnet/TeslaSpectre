@@ -1,5 +1,5 @@
 section#experience{
-	overflow: hidden;
+	overflow-x: hidden;
 	article.gps {
 		padding-left: 20px;
 		padding-right: 20px;
@@ -743,7 +743,7 @@ section#experience{
 		padding-left: 20px;
 		p.title {
 			position: relative;
-			top: 10px;
+			top: 5px;
 			width: 400px;
 			text-transform: uppercase;
 			font-weight: 400;
@@ -767,7 +767,7 @@ section#experience{
 				height: 115px;
 				top: 50px;
 				position: relative;
-				left: 60px;
+				left: 55px;
 				p.counterPressureLeft {
 					line-height: 45px;
 					@include fontBrandonLight();
@@ -789,7 +789,7 @@ section#experience{
 				height: 115px;
 				bottom: 64px;
 				position: relative;
-				left: 200px;
+				left: 195px;
 				p.counterPressureRight {
 					line-height: 45px;
 					@include fontBrandonLight();
@@ -806,6 +806,28 @@ section#experience{
 					border: 0px;
 				}
 			}
+			div.buttonPressureBot {
+				width: 100px;
+				height: 115px;
+				top: 205px;
+				position: absolute;
+				left: 40px;
+				p.counterPressureBot {
+					line-height: 45px;
+					@include fontBrandonLight();
+					margin: 0px;
+					width: 64px;
+					font-size: 33px;
+					text-align: center;
+					color: $green;
+				}
+				button {
+					background: transparent;
+					width: 64px; 
+					height: 20px;
+					border: 0px;
+				}
+			}
 		}
 		div.usure {
 			position: relative;
@@ -814,15 +836,47 @@ section#experience{
 			background-image: url("../assets/img/control/usure.png");
 			width: 296px;
 			height: 308px;
+			div.alert {
+				@include fontAvenir();
+				left: 4px;
+				position: absolute;
+				width: 289px;
+				height: 40px;
+				top: 190px;
+				line-height: 40px;
+				text-align: center;
+				font-size: 22px;
+				background-color: $red;
+				color: $white;
+				border-bottom: 2px solid black;
+				text-transform: uppercase;
+				
+				animation-name: warningAnimation;
+		      	animation-iteration-count: infinite;
+		      	animation-duration: 1s;
+			}
 		}
 		div.car {
 			display: inline-block;
 			position: relative;
 			bottom: 20px;
-			left: -8px;
+			left: 3px;
 			background-image: url("../assets/img/control/car.png");
 			width: 289px;
 			height: 398px;
+
+			animation-name: carAnimation;
+		    animation-iteration-count: infinite;
+		    animation-duration: 1s;
+		}
+		div.usureBad {
+			display: inline-block;
+			position: relative;
+			bottom: 49px;
+			left: 8px;
+			background-image: url("../assets/img/control/usureBad.png");
+			width: 275px;
+			height: 305px;
 		}
 	}
 	@keyframes changeOpacity{
@@ -846,5 +900,27 @@ section#experience{
         100%{
           transform: scale(1);
         }
+    }
+    @keyframes warningAnimation {
+      0% { 
+      	opacity: 1; 
+      }
+      50% { 
+      	opacity: 0; 
+      }
+      100% { 
+      	opacity: 1;
+      }
+    }
+    @keyframes carAnimation {
+      0% { 
+      	opacity: 1; 
+      }
+      50% { 
+      	opacity: 0.8; 
+      }
+      100% { 
+      	opacity: 1;
+      }
     }
 }
