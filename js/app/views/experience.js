@@ -9,6 +9,7 @@ Experience.prototype = Object.create(View.prototype);
 
 Experience.prototype.bind = function() {
 	this.maps();
+    this.incDec();
 };
 
 Experience.prototype.animateIn = function() {
@@ -63,3 +64,36 @@ Experience.prototype.maps = function() {
         position: new google.maps.LatLng(40.6700, -73.9400)
     });
 };
+
+Experience.prototype.incDec = function() {
+    
+    // PressureLeft
+    var counterPressureLeft = 2.3;
+
+    $(".counterPressureLeft").text(counterPressureLeft);
+
+    $(".addPressureLeft").click(function() {
+        counterPressureLeft = counterPressureLeft + 0.1;
+        $(".counterPressureLeft").text(counterPressureLeft);
+    });
+
+    $(".subtractPressureLeft").click(function() {
+      counterPressureLeft = counterPressureLeft - 0.1;
+      $(".counterPressureLeft").text(counterPressureLeft);
+    });
+
+    // PressureRight
+    var counterPressureRight = 2.5;
+
+    $(".counterPressureRight").text(counterPressureRight);
+
+    $(".addPressureRight").click(function() {
+        counterPressureRight = counterPressureRight + 0.1;
+        $(".counterPressureRight").text(counterPressureRight);
+    });
+
+    $(".subtractPressureRight").click(function() {
+      counterPressureRight = counterPressureRight - 0.1;
+      $(".counterPressureRight").text(counterPressureRight);
+    });
+}
