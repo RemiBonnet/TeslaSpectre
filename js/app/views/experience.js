@@ -10,6 +10,7 @@ Experience.prototype = Object.create(View.prototype);
 Experience.prototype.bind = function() {
 	this.maps();
     this.incDec();
+    this.activeToggle();
 };
 
 Experience.prototype.animateIn = function() {
@@ -23,6 +24,87 @@ Experience.prototype.animateIn = function() {
 	this.domElem.fadeIn(function(){
 		self.onAnimateIn();
 	});
+    $(".gps .blocLeft").velocity({
+        opacity: [1, 0.5],
+        translateX: [0, -100],
+    }, {
+        duration: 300,
+        delay: 1000,
+        display: 'inline',
+    });
+    $("div#map").velocity({
+        opacity: [1, 0.1]
+    }, {
+        duration: 8000,
+        display: 'block',
+    });
+    $("div.dot").velocity({
+        opacity: [1, 0]
+    }, {
+        duration: 1000,
+        delay: 2800,
+        display: 'block',
+    });
+    $("article.player").velocity({
+        opacity: [1, 0.1],
+    }, {
+        duration: 500,
+        delay: 100,
+        display: 'inline-block',
+    });
+    $("article.agenda").velocity({
+        opacity: [1, 0],
+    }, {
+        duration: 500,
+        delay: 400,
+        display: 'block',
+    });
+    $("div.graph").velocity({
+        opacity: [1, 0],
+    }, {
+        duration: 800,
+        delay: 500,
+        display: 'block',
+    });
+    $("div.energyRight").velocity({
+        opacity: [1, 0],
+        translateX: [0, 100],
+    }, {
+        duration: 800,
+        delay: 400,
+        display: 'inline-block',
+    });
+    $("div.pressure").velocity({
+        opacity: [1, 0.1],
+        translateX: [0, -100],
+    }, {
+        duration: 1000,
+        delay: 430,
+        display: 'inline-block',
+    });
+    $("div.usureBad").velocity({
+        opacity: [1, 0],
+        translateX: [0, 100],
+    }, {
+        duration: 1000,
+        delay: 450,
+        display: 'inline-block',
+    });
+
+    $("div.usure").velocity({
+        opacity: [1, 0.1],
+    }, {
+        duration: 1500,
+        delay: 450,
+        display: 'inline-block',
+    });
+     $("div.car").velocity({
+        opacity: [1, 0.1],
+    }, {
+        duration: 1500,
+        delay: 750,
+        display: 'inline-block',
+    });
 
 };
 
@@ -111,4 +193,12 @@ Experience.prototype.incDec = function() {
       counterPressureBot = counterPressureBot - 0.1;
       $(".counterPressureBot").text(counterPressureBot);
     });
-}
+};
+
+Experience.prototype.activeToggle = function() {
+    console.log("00");
+    $(".elevationActive").click(function() {
+        console.log("1");
+        $(".elevationActive").toggleClass("toggle");
+    });
+};

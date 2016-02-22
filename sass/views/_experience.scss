@@ -1,5 +1,6 @@
 section#experience{
 	overflow-x: hidden;
+	display: none;
 	article.gps {
 		padding-left: 20px;
 		padding-right: 20px;
@@ -7,6 +8,7 @@ section#experience{
 		div#map {
  			width: 1160px;
             height: 370px;
+            display: none;
             div.gmnoprint {
             	display: none;
             }
@@ -20,6 +22,7 @@ section#experience{
 			}
 		}
 		div.dot {
+			display: none;
 			position: absolute;
 			left: 472px;
 			top: 200px;
@@ -52,7 +55,7 @@ section#experience{
 			background-color: $gray-r;
 			width: 254px;
 			height: 352px;
-			display: inline;
+			display: none;
 			div.top {
 				display: block;
 				text-align: center;
@@ -266,7 +269,7 @@ section#experience{
 		}
 	}
 	article.player {
-		display: inline-block;
+		display: none;
 		margin-left: 20px;
 		width: 535px;
 		height: 270px;
@@ -359,6 +362,7 @@ section#experience{
 		margin-left: 0px;
 		width: 535px;
 		height: 270px;
+		display: none;
 		p.title {
 			font-weight: 400;
 			font-size: 20px;
@@ -542,10 +546,11 @@ section#experience{
 			background-size: cover;
 			width: 876px;
 			height: 305px;
+			display: none;
 		}
 		div.energyRight {
 			padding-left: 10px;
-			display: inline-block;
+			display: none;
 			width: 275px;
 			div.firstBlock {
 				div.top {
@@ -759,7 +764,7 @@ section#experience{
 		div.pressure {
 			position: relative;
 			bottom: 96px;
-			display: inline-block;
+			display: none;
 			background-image: url("../assets/img/control/pressure.png");
 			width: 278px;
 			height: 308px;
@@ -829,7 +834,7 @@ section#experience{
 					border: 0px;
 				}
 			}
-			a.active {
+			a.elevationActive {
 				position: relative;
 				top: 30px;
 				left: 139px;
@@ -843,11 +848,15 @@ section#experience{
 				line-height: 46px;
 				color: $gray-m;
 			}
+			.toggle {
+				background-color: $gray-m !important;
+				color: $green !important;
+			}
 		}
 		div.usure {
 			position: relative;
 			margin-bottom: 46px;
-			display: inline-block;
+			display: none;
 			background-image: url("../assets/img/control/usure.png");
 			width: 296px;
 			height: 308px;
@@ -872,7 +881,7 @@ section#experience{
 			}
 		}
 		div.car {
-			display: inline-block;
+			display: none;
 			position: relative;
 			bottom: 20px;
 			left: 3px;
@@ -880,12 +889,12 @@ section#experience{
 			width: 289px;
 			height: 398px;
 
-			animation-name: carAnimation;
-		    animation-iteration-count: infinite;
-		    animation-duration: 1s;
+			// animation-name: carAnimation;
+		 //    animation-iteration-count: infinite;
+		 //    animation-duration: 1s;
 		}
 		div.usureBad {
-			display: inline-block;
+			display: none;
 			position: relative;
 			bottom: 49px;
 			left: 8px;
