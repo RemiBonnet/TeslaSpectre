@@ -74,5 +74,4 @@ Home.prototype.animateText = function() {
 	    });
 	  };
 	  $it = setInterval(value, $timer);
-
 };
