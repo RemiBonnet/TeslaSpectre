@@ -24,7 +24,7 @@ section#missions {
     .informations {
       background-image: url('../assets/img/missions/map_missions.png');
       background-size: cover;
-      backgroud-position: 50% 50%;
+      background-position: 50% 50%;
       height: 642px;
       .localisation-title{
         //          position: absolute;
@@ -106,6 +106,83 @@ section#missions {
             }
           }
         }
+      }
+    }
+    .position{
+      .dot{
+        position: absolute;
+        left: 692px;
+        top: 375px;
+        background-color: rgba(248, 155, 0, 0.8);
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.8);
+
+        animation-name: changeOpacity, changeScale;
+        animation-iteration-count: infinite, infinite;
+        animation-duration: 1.5s, 1.5s;
+        .inner{
+          box-shadow: 0px 1px 1px $black;
+          position: relative;
+          left: 40%;
+          top: 40%;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: #f2241d;
+        }
+      }
+      @keyframes changeOpacity{
+        0%{
+          background-color: rgba(248, 155, 0, 0.8);
+        }
+        50%{
+          background-color: rgba(248, 155, 0, 0.5);
+        }
+        100%{
+          background-color: rgba(248, 155, 0, 0.8);
+        }
+      }
+      @keyframes changeScale{
+        0%{
+          transform: scale(1);
+        }
+        50%{
+          transform: scale(1.1);
+        }
+        100%{
+          transform: scale(1);
+        }
+      }
+      .city{
+        position: absolute;
+        top: 380px;
+        left: 792px;
+        background-color: $orange;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 0px 2px 0px 2px;
+      }
+      .address{
+        position: absolute;
+        top: 410px;
+        left: 792px;
+        background-color: $gray-m;
+        color: $white;
+        font-size: 11px;
+        font-weight: light;
+        padding: 1px 3px 1px 3px;
+      }
+      .zip{
+        position: absolute;
+        top: 430px;
+        left: 792px;
+        background-color: $gray-m;
+        color: $gray-l;
+        font-size: 11px;
+        font-weight: light;
+        padding: 1px 3px 1px 3px;
       }
     }
   }
