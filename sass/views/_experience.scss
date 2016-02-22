@@ -828,6 +828,20 @@ section#experience{
 					border: 0px;
 				}
 			}
+			a.active {
+				position: relative;
+				top: 30px;
+				left: 139px;
+				display: block;
+				text-decoration: none;
+				text-align: center;
+				background-color: $green;
+				width: 136px;
+				height: 47px;
+				@include fontAvenir();
+				line-height: 46px;
+				color: $gray-m;
+			}
 		}
 		div.usure {
 			position: relative;
