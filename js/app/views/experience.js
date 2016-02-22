@@ -29,36 +29,41 @@ Experience.prototype.animateIn = function() {
         translateX: [0, -100],
     }, {
         duration: 300,
-        delay: 500,
+        delay: 1000,
         display: 'inline',
+    });
+    $("div#map").velocity({
+        opacity: [1, 0.1]
+    }, {
+        duration: 8000,
+        display: 'block',
     });
     $("div.dot").velocity({
         opacity: [1, 0]
     }, {
         duration: 1000,
-        delay: 1400,
+        delay: 2800,
         display: 'block',
     });
     $("article.player").velocity({
         opacity: [1, 0.1],
-        translateX: [0, -100],
     }, {
         duration: 500,
-        delay: 10,
+        delay: 100,
         display: 'inline-block',
     });
     $("article.agenda").velocity({
         opacity: [1, 0],
     }, {
         duration: 500,
-        delay: 50,
+        delay: 400,
         display: 'block',
     });
     $("div.graph").velocity({
         opacity: [1, 0],
     }, {
         duration: 800,
-        delay: 100,
+        delay: 500,
         display: 'block',
     });
     $("div.energyRight").velocity({
@@ -66,7 +71,7 @@ Experience.prototype.animateIn = function() {
         translateX: [0, 100],
     }, {
         duration: 800,
-        delay: 100,
+        delay: 400,
         display: 'inline-block',
     });
     $("div.pressure").velocity({
@@ -74,7 +79,7 @@ Experience.prototype.animateIn = function() {
         translateX: [0, -100],
     }, {
         duration: 1000,
-        delay: 130,
+        delay: 430,
         display: 'inline-block',
     });
     $("div.usureBad").velocity({
@@ -82,7 +87,7 @@ Experience.prototype.animateIn = function() {
         translateX: [0, 100],
     }, {
         duration: 1000,
-        delay: 150,
+        delay: 450,
         display: 'inline-block',
     });
 
@@ -90,14 +95,14 @@ Experience.prototype.animateIn = function() {
         opacity: [1, 0.1],
     }, {
         duration: 1500,
-        delay: 150,
+        delay: 450,
         display: 'inline-block',
     });
      $("div.car").velocity({
         opacity: [1, 0.1],
     }, {
         duration: 1500,
-        delay: 150,
+        delay: 750,
         display: 'inline-block',
     });
 
