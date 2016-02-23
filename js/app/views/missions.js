@@ -83,7 +83,7 @@ Missions.prototype.video = function() {
     var cta = $('#weapon .weapon-center');
     var container = $('#radar-container');
     var video = $('#video-mission video')[0];
-    var sound = $('#video-mission video')[1];
+    var sound = $('#video-mission .sound')[0];
     var warning = $('#warning-imminent');
 
     cta.on('click', function() {
