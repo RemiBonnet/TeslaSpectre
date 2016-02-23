@@ -217,10 +217,11 @@ section#missions {
 //    display: none;
     width: 1160px;
     height: 494px;
+    background-color: $black;
     margin-left: 20px;
-    margin-top: 605px;
-    margin-bottom: -625px;
-    position: relative;
+    position: absolute;
+    margin-top: 20px;
+    z-index: 1000;
     .radar-title{
       @include fontAvenir();
       font-size: 20px;
@@ -484,6 +485,15 @@ section#missions {
           margin-left: 20px;
           margin-top: 8px;
         }
+      }
+    }
+    #video-mission{
+      position: absolute;
+      margin-left: 494+40px;
+      margin-top: -400px;
+      video{
+        width: 612px;
+        height: auto;
       }
     }
   }
