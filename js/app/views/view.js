@@ -24,6 +24,11 @@ var View = function(){
 
 	this.images = {};
 
+    this.viewsWithoutHeaderFooter = [
+        'home',
+        'loader',
+    ];
+
 	// Init view
 	this.init();
 
@@ -124,6 +129,9 @@ View.prototype.setSelectors = function() {
 	// Set domElem
 	this.domElem = this.container.find('#' + this.domId);
 
+    this.header = document.getElementsByTagName('header');
+    this.footer = document.getElementsByTagName('footer');
+
 	// Hide it
 	this.domElem.hide();
 
@@ -157,6 +165,8 @@ View.prototype.onAnimateIn = function() {
 	this._onAnimateIn.dispatch();
 
 	this.incDec();
+
+    this.displayHeaderFooter();
 	
 };
 
@@ -238,5 +248,12 @@ View.prototype.incDec = function() {
 	  counterVolume = counterVolume - 1;
 	  $(".counterVolume").text(counterVolume);
 	});
+};
+
+View.prototype.displayHeaderFooter = function() {
+    if ($.inArray(this.id, this.viewsWithoutHeaderFooter) <= -1) {
+        $(this.header[0]).removeClass('hidden');
+        $(this.footer[0]).removeClass('hidden');
+    }
 };
 
