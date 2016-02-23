@@ -198,6 +198,7 @@ section#missions {
     background-color: $red;
     text-align: center;
     animation: warningAnimation 1.5s infinite;
+    animation-delay: 10s;
     span{
       @include fontAvenir();
       font-size: 32px;
@@ -214,7 +215,7 @@ section#missions {
     }
   }
   #radar-container{
-//    display: none;
+    display: none;
     width: 1160px;
     height: 494px;
     background-color: $black;
@@ -816,6 +817,9 @@ section#missions {
       background-position: 50% 50%;
       margin-top: -199px;
       margin-left: 473px;
+      &:hover{
+        cursor: pointer;
+      }
     }
     .weapon-right{
       width: 459px;

@@ -10,6 +10,7 @@ Missions.prototype = Object.create(View.prototype);
 
 Missions.prototype.bind = function() {
     this.radar();
+    this.video();
 };
 
 Missions.prototype.animateIn = function() {
@@ -76,6 +77,30 @@ Missions.prototype.radar = function() {
         }
 
     })();
+}
+
+Missions.prototype.video = function() {
+    var cta = $('#weapon .weapon-center');
+    var container = $('#radar-container');
+    var video = $('#video-mission video')[0];
+    var sound = $('#video-mission video')[1];
+    var warning = $('#warning-imminent');
+
+    cta.on('click', function() {
+        container.fadeIn(function() {
+            video.play();
+            setTimeout(function() {
+                sound.play();
+            }, 2900);
+        });
+    });
+
+    video.onended = function() {
+        container.fadeOut(function() {
+            video.currentTime = 0;
+        });
+        warning.fadeOut();
+    }
 }
 
 
