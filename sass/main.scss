@@ -18,6 +18,8 @@ body {
 section {
   background-image: url("../assets/img/pattern.png");
   width: 1200px;
+
+  position: relative
 }
 
 // Views
@@ -25,3 +27,4 @@ section {
 @import "views/experience";
 @import "views/music";
 @import "views/navigate";
+@import "views/missions";
