@@ -164,29 +164,29 @@ section#missions {
         top: 380px;
         left: 792px;
         background-color: $orange;
-        font-weight: bold;
-        font-size: 20px;
-        padding: 0px 2px 0px 2px;
+        @include fontAvenirBlack();
+        font-size: 30px;
+        padding: 5px 3px 0px 3px;
       }
       .addressMission{
         display: none;
         position: absolute;
-        top: 410px;
+        top: 425px;
         left: 792px;
         background-color: $gray-m;
         color: $white;
-        font-size: 11px;
+        font-size: 18px;
         font-weight: light;
         padding: 1px 3px 1px 3px;
       }
       .zip{
         display: none;
         position: absolute;
-        top: 430px;
+        top: 455px;
         left: 792px;
         background-color: $gray-m;
         color: $gray-l;
-        font-size: 11px;
+        font-size: 18px;
         font-weight: light;
         padding: 1px 3px 1px 3px;
       }
