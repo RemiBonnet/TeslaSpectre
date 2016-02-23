@@ -1,5 +1,5 @@
 section#experience{
-	overflow-x: hidden;
+	overflow: hidden;
 	display: none;
 	article.gps {
 		padding-left: 20px;
@@ -50,7 +50,7 @@ section#experience{
 		div.blocLeft {
 			z-index: 9999;
 			position: absolute;
-			top: 30px;
+			top: 180px;
 			left: 25px;
 			background-color: $gray-r;
 			width: 254px;
@@ -203,7 +203,7 @@ section#experience{
 		div.blocRight {
 			z-index: 9999;
 			position: absolute;
-			top: 25px;
+			top: 180px;
 			left: 907px;
 			background-color: $black;
 			width: 275px;
