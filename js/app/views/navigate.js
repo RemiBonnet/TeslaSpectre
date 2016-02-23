@@ -62,18 +62,14 @@ Navigate.prototype.animateIn = function() {
 
 
     $("header").velocity({
-        opacity: [1, 0.5],
-        translateY: [0, -10],
+        opacity: [1, 1],
     }, {
-        duration: 100,
         display: 'block'
     });
 
     $("footer").velocity({
-        opacity: [1, 0.5],
-        translateY: [0, 10],
+        opacity: [1, 1],
     }, {
-        duration: 100,
         display: 'block'
     });
 };
