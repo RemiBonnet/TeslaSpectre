@@ -1,8 +1,28 @@
 // FONTS
 
 @font-face {
-	font-family: "Avenir";
-	src: url('/assets/fonts/avenir.ttc');
+  font-family: "Avenir";
+  src: url('/assets/fonts/avenir.ttc');
+}
+
+@font-face {
+  font-family: "AvenirMedium";
+  src: url('/assets/fonts/Avenir-Medium.otf');
+}
+
+@font-face {
+  font-family: "AvenirHeavy";
+  src: url('/assets/fonts/Avenir-Heavy.otf');
+}
+
+@font-face {
+  font-family: "AvenirBlack";
+  src: url('/assets/fonts/Avenir-Black.otf');
+}
+
+@font-face {
+  font-family: "AvenirBook";
+  src: url('/assets/fonts/Avenir-Book.otf');
 }
 
 @font-face {
@@ -28,8 +48,28 @@
 
 
 @mixin fontAvenir() {
-	font-family: 'Avenir';
-	text-transform: uppercase;
+  font-family: 'Avenir';
+  text-transform: uppercase;
+}
+
+@mixin fontAvenirMedium() {
+  font-family: 'AvenirMedium';
+  text-transform: uppercase;
+}
+
+@mixin fontAvenirHeavy() {
+  font-family: 'AvenirHeavy';
+  text-transform: uppercase;
+}
+
+@mixin fontAvenirBlack() {
+  font-family: 'AvenirBlack';
+  text-transform: uppercase;
+}
+
+@mixin fontAvenirBook() {
+  font-family: 'AvenirBook';
+  text-transform: uppercase;
 }
 
 @mixin fontBrandonBold() {

@@ -48,9 +48,6 @@ Router.prototype.createRoutes = function() {
 		self._onNavigate.dispatch({
 			view: 'home'
 		});
-
-		console.log( '## Navigate view home' );
-
 	});
 
     // Experience
@@ -59,9 +56,6 @@ Router.prototype.createRoutes = function() {
         self._onNavigate.dispatch({
             view: 'experience'
         });
-
-        console.log( '## Navigate view experience' );
-
     });
 
     // Music
@@ -70,9 +64,14 @@ Router.prototype.createRoutes = function() {
         self._onNavigate.dispatch({
             view: 'music'
         });
+    });
 
-        console.log( '## Navigate view music' );
+    // Music
+    crossroads.addRoute( '/contact' , function(){
 
+        self._onNavigate.dispatch({
+            view: 'contact'
+        });
     });
 
     // Navigate

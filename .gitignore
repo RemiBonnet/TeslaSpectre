@@ -8,6 +8,7 @@
 
 /stylesheets
 /assets/videos/*
+/assets/img/svg/*
 !/assets/videos/.gitkeep
 
 ### JetBrains template
