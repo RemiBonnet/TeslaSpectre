@@ -23,7 +23,8 @@ ViewController.prototype.init = function() {
 	this.views = {
 		'home': new Home(),
 		'experience': new Experience(),
-		'music': new Music()
+		'music': new Music(),
+		'navigate': new Navigate()
 	};
 
 };
