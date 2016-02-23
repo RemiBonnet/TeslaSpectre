@@ -167,7 +167,7 @@ View.prototype.onAnimateIn = function() {
 	this.incDec();
 
     this.displayHeaderFooter();
-	
+
 };
 
 // Animate view out
