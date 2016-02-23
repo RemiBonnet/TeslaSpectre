@@ -1,6 +1,6 @@
 footer{
 	position: absolute;
-	bottom:0;
+	top:1700px;
 	width: 1200px;
 	height: 220px;
 	background-color: $black;
@@ -159,7 +159,7 @@ footer{
 				float: left;
 				width: 156px;
 				svg:nth-child(1){
-					height: 70px;
+					height: 60px;
 					width: 51px;
 					fill: $gray-l;
 				}
@@ -167,8 +167,8 @@ footer{
 					height: 35px;
 					width: 35px;
 					fill: $orange;
-					margin-bottom: 6px;
-					margin-top: 6px;
+					margin-bottom: 7px;
+					margin-top: 7px;
 				}
 				a {
 					background-color: $orange;
@@ -178,8 +178,8 @@ footer{
 				float: right;
 				width: 156px;
 				svg:nth-child(1){
-					margin-bottom: 16px;
-					margin-top: 16px;
+					margin-bottom: 11px;
+					margin-top: 11px;
 					height: 38px;
 					width: 35px;
 					fill: $gray-l;
@@ -188,8 +188,8 @@ footer{
 					height: 35px;
 					width: 35px;
 					fill: $green;
-					margin-bottom: 6px;
-					margin-top: 6px;
+					margin-bottom: 11px;
+					margin-top: 3px;
 				}
 				a {
 					background-color: $green;
