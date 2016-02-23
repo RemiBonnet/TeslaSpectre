@@ -47,6 +47,7 @@ section#missions {
         display: none;
         margin-top: -34px;
         .name{
+          @include fontAvenirMedium();
           position: absolute;
           width: 165px;
           height: 45px;
@@ -66,7 +67,7 @@ section#missions {
           height: 28px;
           margin-left: 51px;
           margin-top: 495px;
-          @include fontAvenir();
+          @include fontAvenirBlack();
           font-size: 16px;
           letter-spacing: .075em;
           text-align: center;
@@ -639,7 +640,7 @@ section#missions {
           float: right;
           margin-top: -193px;
           .title{
-            @include fontAvenir();
+            @include fontAvenirMedium();
             font-size: 20px;
             color: $gray-l;
             background-color: $gray-r;
@@ -676,7 +677,7 @@ section#missions {
           float:right;
           margin-top: -94px;
           .title{
-            @include fontAvenir();
+            @include fontAvenirMedium();
             font-size: 20px;
             color: $gray-l;
             background-color: $gray-r;
@@ -730,7 +731,7 @@ section#missions {
           float: right;
           margin-top: -193px;
           .title{
-            @include fontAvenir();
+            @include fontAvenirMedium();
             font-size: 20px;
             color: $gray-l;
             background-color: $gray-r;
@@ -768,7 +769,7 @@ section#missions {
           float:right;
           margin-top: -94px;
           .title{
-            @include fontAvenir();
+            @include fontAvenirMedium();
             font-size: 20px;
             color: $gray-l;
             background-color: $gray-r;
