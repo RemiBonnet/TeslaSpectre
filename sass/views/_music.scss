@@ -116,6 +116,8 @@ section#music{
               padding: 0 0 0 20px;
               line-height:55px;
 
+              cursor: pointer;
+
               &:hover, &:focus {
                 color: $white;
               }

@@ -25,7 +25,8 @@ ViewController.prototype.init = function() {
 		'experience': new Experience(),
         'missions': new Missions(),
 		'music': new Music(),
-		'navigate': new Navigate()
+		'navigate': new Navigate(),
+		'contact': new Contact()
 	};
 
 };
