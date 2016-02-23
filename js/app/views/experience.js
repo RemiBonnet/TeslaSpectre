@@ -35,7 +35,7 @@ Experience.prototype.animateIn = function() {
     $("div#map").velocity({
         opacity: [1, 0.1]
     }, {
-        duration: 8000,
+        duration: 1000,
         display: 'block',
     });
     $("div.dot").velocity({
@@ -104,6 +104,22 @@ Experience.prototype.animateIn = function() {
         duration: 1500,
         delay: 750,
         display: 'inline-block',
+    });
+
+    $("header").velocity({
+        opacity: [1, 0.5],
+        translateY: [0, -10],
+    }, {
+        duration: 100,
+        display: 'block'
+    });
+
+    $("footer").velocity({
+        opacity: [1, 0.5],
+        translateY: [0, 10],
+    }, {
+        duration: 100,
+        display: 'block'
     });
 
 };
