@@ -105,23 +105,6 @@ Experience.prototype.animateIn = function() {
         delay: 750,
         display: 'inline-block',
     });
-
-    $("header").velocity({
-        opacity: [1, 0.5],
-        translateY: [0, -10],
-    }, {
-        duration: 100,
-        display: 'block'
-    });
-
-    $("footer").velocity({
-        opacity: [1, 0.5],
-        translateY: [0, 10],
-    }, {
-        duration: 100,
-        display: 'block'
-    });
-
 };
 
 Experience.prototype.animateOut = function() {

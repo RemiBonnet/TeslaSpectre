@@ -251,9 +251,26 @@ View.prototype.incDec = function() {
 };
 
 View.prototype.displayHeaderFooter = function() {
-    if ($.inArray(this.id, this.viewsWithoutHeaderFooter) <= -1) {
-        $(this.header[0]).removeClass('hidden');
-        $(this.footer[0]).removeClass('hidden');
+    if (
+        $.inArray(this.id, this.viewsWithoutHeaderFooter) == -1 &&
+        $(this.header[0]).css('display') == 'none' &&
+        $(this.footer[0]).css('display') == 'none'
+    ) {
+        $(this.header[0]).velocity({
+            opacity: [1, 0.5],
+            translateY: [0, -10],
+        }, {
+            duration: 100,
+            display: 'block'
+        });
+
+        $(this.footer[0]).velocity({
+            opacity: [1, 0.5],
+            translateY: [0, 10],
+        }, {
+            duration: 100,
+            display: 'block'
+        });
     }
 };
 

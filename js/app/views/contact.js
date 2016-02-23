@@ -56,4 +56,4 @@ Contact.prototype.setSelectors = function() {
 
     this.contactList = this.domElem.find('.contact-list');
     this.name = this.contactList.find('li');
-}
+};
