@@ -9,6 +9,7 @@ Music.prototype = Object.create(View.prototype);
 
 Music.prototype.bind = function() {
     View.prototype.bind.call(this);
+    this.call();
 
     this.play.on('click', $.proxy(this.onPlayClick, this));
     this.pause.on('click', $.proxy(this.onPauseClick, this));
@@ -125,3 +126,100 @@ Music.prototype.writeSpectrumVideoDuration = function() {
 
     this.spectrumVideoDurationElement.html(duration);
 };
+
+Music.prototype.call = function() {
+    var container = $('#call');
+    var video = $('#call #modal video')[0];
+    var time = $('#call #modal .time');
+    var minute = $('#call #modal .time .minute');
+    var second = $('#call #modal .time .second');
+    var decline = $('#call #modal .infos .decline');
+    var accept = $('#call #modal .infos .accept');
+    var secondCount = 0;
+    var minuteCount = 0;
+
+    $(document).keydown(function(e){
+        if(e.keyCode == 67) {
+            video.play();
+            container.fadeIn();
+        }
+    });
+
+    decline.on('click', function(){
+        container.fadeOut(function(){
+            minuteCount = 0;
+            secondCount = 0;
+
+            accept.velocity({
+                opacity: [1, 0],
+                translateX: [0, 100]
+            }, {
+                duration: 500,
+                opacity: 1
+            });
+
+            decline.velocity({
+                translateX: [0, 80]
+            }, {
+                duration: 500
+            });
+
+            time.velocity({
+                translateY: [0, -200],
+                opacity: [0, 1]
+            }, {
+                duration: 1000,
+                opacity: 0
+            });
+
+            decline.html('decline');
+        });
+    });
+
+    accept.on('click', function(){
+
+        accept.velocity({
+            opacity: [0, 1],
+            translateX: [100, 0]
+        }, {
+            duration: 500,
+            opacity: 0
+        });
+
+        decline.velocity({
+            translateX: [80, 0]
+        }, {
+            duration: 500
+        });
+
+        time.velocity({
+            translateY: [-200, 0],
+            opacity: [1, 0]
+        }, {
+            duration: 1000,
+            opacity: 1
+        });
+
+        decline.html('end');
+
+        setInterval(function(){
+            secondCount ++;
+
+            if(secondCount < 10) {
+                secondCount = '0' + secondCount;
+            }
+
+            if(secondCount == 60) {
+                secondCount = 0;
+                minuteCount ++;
+
+                if(minuteCount < 10) {
+                    minuteCount = '0' + minuteCount;
+                }
+            }
+
+            second.html(secondCount);
+            minute.html(minuteCount);
+        }, 1000);
+    });
+}
