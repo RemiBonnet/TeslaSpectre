@@ -296,3 +296,52 @@ section#music{
 
   }
 }
+
+article#call{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2000;
+  width: 1200px;
+  height: 1900px;
+  background-color: rgba(0, 0, 0, 0.5);
+  @include fontAvenir();
+  color: $white;
+  display: none;
+  div#modal{
+    video {
+      display: block;
+      margin: 0 auto;
+    }
+    .infos{
+      position: absolute;
+      display: block;
+      margin-top: -520px;
+      margin-left: 450px;
+      text-align: center;
+      .name{
+        font-size: 40px;
+      }
+      .time{
+        font-size: 70px;
+        opacity: 0;
+      }
+      .btn-call{
+        @include fontAvenir();
+        margin-top: 40px;
+        font-size: 20px;
+        font-weight: bold;
+        border: none;
+        padding: 10px 40px 10px 40px;
+        &.decline{
+          color: $red;
+          background-color: $gray-b;
+        }
+        &.accept{
+          color: $gray-b;
+          background-color: $green;
+        }
+      }
+    }
+  }
+}
