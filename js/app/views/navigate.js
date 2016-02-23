@@ -22,6 +22,60 @@ Navigate.prototype.animateIn = function() {
 	this.domElem.fadeIn(function(){
 		self.onAnimateIn();
 	});
+
+    $(".blocLeft").velocity({
+        opacity: [1, 0.5],
+        translateX: [0, -100],
+    }, {
+        duration: 300,
+        delay: 1000,
+        display: 'inline',
+    });
+    $(".leftNavigate").velocity({
+        opacity: [1, 0.5],
+        translateX: [0, -100],
+    }, {
+        duration: 300,
+        delay: 1500,
+        display: 'block',
+    });
+    $(".bottomNavigate").velocity({
+        opacity: [1, 0.5],
+    }, {
+        duration: 300,
+        delay: 1600,
+        display: 'block',
+    });
+    $("div#map").velocity({
+        opacity: [1, 0.1]
+    }, {
+        duration: 1000,
+        display: 'block',
+    });
+    $("div.dot").velocity({
+        opacity: [1, 0]
+    }, {
+        duration: 1000,
+        delay: 2800,
+        display: 'block',
+    });
+
+
+    $("header").velocity({
+        opacity: [1, 0.5],
+        translateY: [0, -10],
+    }, {
+        duration: 100,
+        display: 'block'
+    });
+
+    $("footer").velocity({
+        opacity: [1, 0.5],
+        translateY: [0, 10],
+    }, {
+        duration: 100,
+        display: 'block'
+    });
 };
 
 Navigate.prototype.animateOut = function() {
