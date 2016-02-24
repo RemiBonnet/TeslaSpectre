@@ -332,7 +332,7 @@ article#call{
         opacity: 0;
       }
       .btn-call{
-        @include fontAvenir();
+        @include fontAvenirBlack();
         margin-top: 40px;
         font-size: 20px;
         font-weight: bold;

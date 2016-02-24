@@ -11,6 +11,7 @@ Experience.prototype.bind = function() {
 	this.maps();
     this.incDec();
     this.activeToggle();
+    this.hello();
 };
 
 Experience.prototype.animateIn = function() {
@@ -200,4 +201,25 @@ Experience.prototype.activeToggle = function() {
         console.log("1");
         $(".elevationActive").toggleClass("toggle");
     });
+};
+
+Experience.prototype.hello = function() {
+    var hellosound = $('#experience video')[0];
+    var helloplayed = getCookie('helloplayed');
+
+    hellosound.loop = false;
+
+    if(helloplayed != 1) {
+        hellosound.play();
+    }
+
+    hellosound.onended = function() {
+        document.cookie = 'helloplayed=1';
+    }
+
+    function getCookie(name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length == 2) return parts.pop().split(";").shift();
+    }
 };
