@@ -1,4 +1,6 @@
 section#contact {
+  clear: both;
+  height: 900px;
   #title {
     margin: 0 0 15px 20px;
     padding-top: 50px;
@@ -19,6 +21,7 @@ section#contact {
       vertical-align: top;
     }
     #left {
+      display: none;
       position: absolute;
       left: 20px;
 
@@ -152,6 +155,7 @@ section#contact {
         position: relative;
 
         .name {
+          display: none;
           @include fontAvenir();
           padding: 12px;
           color: $white;
@@ -189,6 +193,7 @@ section#contact {
             height: 248px;
             background-color: $gray-b;
             table {
+              display: none;
               margin: 0 0 0 15px;
 
               td {
