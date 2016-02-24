@@ -44,6 +44,7 @@ section#missions {
         }
       }
       .card {
+        display: none;
         margin-top: -34px;
         .name{
           position: absolute;
@@ -85,6 +86,7 @@ section#missions {
           height: 111px;
           width: 392px;
           .infos-list{
+            display: none;
             @include fontAvenir();
             margin-top: 22px;
             width: 208px;
@@ -109,7 +111,8 @@ section#missions {
       }
     }
     .position{
-      .dot{
+      .dotMission{
+        display: none;
         position: absolute;
         left: 692px;
         top: 375px;
@@ -155,7 +158,8 @@ section#missions {
           transform: scale(1);
         }
       }
-      .city{
+      .cityMission {
+        display: none;
         position: absolute;
         top: 380px;
         left: 792px;
@@ -164,7 +168,8 @@ section#missions {
         font-size: 20px;
         padding: 0px 2px 0px 2px;
       }
-      .address{
+      .addressMission{
+        display: none;
         position: absolute;
         top: 410px;
         left: 792px;
@@ -175,6 +180,7 @@ section#missions {
         padding: 1px 3px 1px 3px;
       }
       .zip{
+        display: none;
         position: absolute;
         top: 430px;
         left: 792px;
@@ -508,6 +514,7 @@ section#missions {
       float:left;
       padding-top: 50px;
       .mission-title{
+        display: none;
         @include fontAvenir();
         font-weight: light;
         color: $white;
@@ -521,6 +528,7 @@ section#missions {
         }
       }
       .mission-info{
+        display: none;
         @include fontAvenir();
         font-size: 13px;
         margin-left: 125px;
@@ -529,6 +537,7 @@ section#missions {
         letter-spacing: .075em;
       }
       .mission-desc{
+        display: none;
         @include fontAvenir();
         color: $white;
         font-size: 17px;
@@ -571,6 +580,7 @@ section#missions {
           margin-top: 10px;
         }
         .percent{
+          margin-top: 5px;
           @include fontAvenir();
           font-size: 15px;
           color: $red;
@@ -623,6 +633,7 @@ section#missions {
           }
         }
         .damage{
+          display: none;
           height: 94px;
           width: 226px;
           float: right;
@@ -659,6 +670,7 @@ section#missions {
           }
         }
         .bullet-holes{
+          display: none;
           height:94px;
           width: 226px;
           float:right;
@@ -712,6 +724,7 @@ section#missions {
           }
         }
         .damage{
+          display: none;
           height: 94px;
           width: 226px;
           float: right;
@@ -749,6 +762,7 @@ section#missions {
           }
         }
         .power{
+          display: none;
           height:94px;
           width: 226px;
           float:right;

@@ -257,7 +257,7 @@ View.prototype.displayHeaderFooter = function() {
         $(this.footer[0]).css('display') == 'none'
     ) {
         $(this.header[0]).velocity({
-            opacity: [1, 0.5],
+            opacity: [1, 0],
             translateY: [0, -10],
         }, {
             duration: 100,
@@ -265,7 +265,7 @@ View.prototype.displayHeaderFooter = function() {
         });
 
         $(this.footer[0]).velocity({
-            opacity: [1, 0.5],
+            opacity: [1, 0],
             translateY: [0, 10],
         }, {
             duration: 100,
