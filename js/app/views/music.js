@@ -28,6 +28,30 @@ Music.prototype.animateIn = function() {
 		self.onAnimateIn();
 	});
 
+    $("#left").velocity({
+        opacity: [1, 0],
+        translateX: [0, -100],
+    }, {
+        duration: 300,
+        delay: 500,
+        display: 'inline-block',
+    });
+    $("#center .player").velocity({
+        opacity: [1, 0],
+    }, {
+        duration: 1000,
+        delay: 900,
+        display: 'block',
+    });
+    $("#center .disclamer").velocity({
+        opacity: [1, 0],
+        translateX: [0, -100],
+    }, {
+        duration: 600,
+        delay: 1200,
+        display: 'block',
+    });
+
 };
 
 Music.prototype.animateOut = function() {

@@ -18,6 +18,7 @@ section#music{
       vertical-align: top;
     }
     #left {
+      display: none;
       & > * {
         display: inline-block;
         vertical-align: top;
@@ -139,6 +140,7 @@ section#music{
       right: 20px;
 
       .player {
+        display: none;
         margin-left: 6px;
         vertical-align: middle;
         width: 774px;
@@ -173,6 +175,7 @@ section#music{
             line-height: normal;
 
             .disclamer {
+              display: none;
               @include fontAvenir();
               font-size : 14px;
               font-weight: bold;
