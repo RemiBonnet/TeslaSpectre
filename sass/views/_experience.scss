@@ -114,6 +114,7 @@ section#experience{
 							padding-top: 27px;
 						}
 						&::-webkit-input-placeholder {
+                            @include fontAvenirBlack();
 							color: $gray-l;
 						}
 					}
@@ -307,6 +308,7 @@ section#experience{
 							font-size: 17px;
 						}
 						&:nth-child(2) {
+                            @include fontAvenirBlack();
 							padding-bottom: 10px;
 							padding-left: 10px;
 							padding-right: 10px;
