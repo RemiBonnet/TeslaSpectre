@@ -25,6 +25,33 @@ Contact.prototype.animateIn = function() {
 		self.onAnimateIn();
 	});
 
+	$("#left").velocity({
+        opacity: [1, 0],
+        translateX: [0, -100],
+    }, {
+        duration: 300,
+        delay: 700,
+        display: 'inline-block',
+    });
+
+    $("#right .name").velocity({
+        opacity: [1, 0],
+        translateX: [0, -100],
+    }, {
+        duration: 300,
+        delay: 1000,
+        display: 'inline-block',
+    });
+
+    $("#right table").velocity({
+        opacity: [1, 0],
+    }, {
+        duration: 800,
+        delay: 500,
+        display: 'block',
+    });
+
+
 };
 
 Contact.prototype.animateOut = function() {
