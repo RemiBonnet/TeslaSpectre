@@ -25,6 +25,111 @@ Missions.prototype.animateIn = function() {
         self.onAnimateIn();
     });
 
+    $(".card, .profile-title").velocity({
+        opacity: [1, 0.5],
+        translateX: [0, -100],
+    }, {
+        duration: 300,
+        delay: 200,
+        display: 'block',
+    });
+    $("div#map").velocity({
+        opacity: [1, 0.1]
+    }, {
+        duration: 1000,
+        delay: 200,
+        display: 'block',
+    });
+    $("div.dotMission").velocity({
+        opacity: [1, 0]
+    }, {
+        duration: 1000,
+        delay: 800,
+        display: 'block',
+    });
+    $(".cityMission").velocity({
+        opacity: [1, 0],
+        translateX: [0, -100],
+    }, {
+        duration: 500,
+        delay: 1000,
+        display: 'block',
+    });
+    $(".addressMission").velocity({
+        opacity: [1, 0],
+        translateX: [0, -100],
+    }, {
+        duration: 1000,
+        delay: 1000,
+        display: 'block',
+    });
+    $(".zip").velocity({
+        opacity: [1, 0],
+        translateX: [0, -100],
+    }, {
+        duration: 1000,
+        delay: 1100,
+        display: 'block',
+    });
+    $(".infos-list").velocity({
+        opacity: [1, 0],
+    }, {
+        duration: 1000,
+        delay: 800,
+        display: 'block',
+    });
+    $(".bodywork .damage").velocity({
+        opacity: [1, 0],
+        translateX: [0, 100],
+    }, {
+        duration: 1000,
+        display: 'block',
+    });
+    $(".bodywork .bullet-holes").velocity({
+        opacity: [1, 0],
+        translateX: [0, 100],
+    }, {
+        delay: 50,
+        duration: 1000,
+        display: 'block',
+    });
+    $(".engine .damage").velocity({
+        opacity: [1, 0],
+        translateX: [0, 100],
+    }, {
+        delay: 100,
+        duration: 1000,
+        display: 'block',
+    });
+    $(".engine .power").velocity({
+        opacity: [1, 0],
+        translateX: [0, 100],
+    }, {
+        delay: 150,
+        duration: 1000,
+        display: 'block',
+    });
+    $(".mission-title").velocity({
+        opacity: [1, 0],
+    }, {
+        delay: 300,
+        duration: 1000,
+        display: 'block',
+    });
+    $(".mission-info").velocity({
+        opacity: [1, 0],
+    }, {
+        delay: 500,
+        duration: 1000,
+        display: 'inline',
+    });
+    $(".mission-desc").velocity({
+        opacity: [1, 0],
+    }, {
+        delay: 700,
+        duration: 1000,
+        display: 'block',
+    });
 };
 
 Missions.prototype.animateOut = function() {
