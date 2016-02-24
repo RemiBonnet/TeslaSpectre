@@ -8,6 +8,7 @@ var Home = function(){
 Home.prototype = Object.create(View.prototype);
 
 Home.prototype.bind = function() {
+    this.refreshHello();
 	this.animateText();
 };
 
@@ -74,4 +75,8 @@ Home.prototype.animateText = function() {
 	    });
 	  };
 	  $it = setInterval(value, $timer);
+};
+
+Home.prototype.refreshHello = function() {
+    document.cookie = 'helloplayed=0';
 };
