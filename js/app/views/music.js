@@ -39,7 +39,7 @@ Music.prototype.animateIn = function() {
     $("#center .player").velocity({
         opacity: [1, 0],
     }, {
-        duration: 300,
+        duration: 1000,
         delay: 900,
         display: 'block',
     });
@@ -47,7 +47,7 @@ Music.prototype.animateIn = function() {
         opacity: [1, 0],
         translateX: [0, -100],
     }, {
-        duration: 300,
+        duration: 600,
         delay: 1200,
         display: 'block',
     });
