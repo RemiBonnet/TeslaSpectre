@@ -112,6 +112,7 @@ section#missions {
       }
     }
     .position{
+      z-index: 1000;
       .dotMission{
         display: none;
         position: absolute;
@@ -498,7 +499,7 @@ section#missions {
     #video-mission{
       position: absolute;
       margin-left: 494+40px;
-      margin-top: -400px;
+      margin-top: -370px;
       video{
         width: 612px;
         height: auto;
@@ -827,11 +828,14 @@ section#missions {
     .weapon-center{
       width: 225px;
       height: inherit;
-      background-image: url('../assets/img/missions/missile.png');
-      background-size: 108% 108%;
-      background-position: 50% 50%;
+      background-color: $gray-r;
       margin-top: -199px;
       margin-left: 473px;
+      svg{
+        fill: $gray-l;
+        margin-left: 30px;
+        margin-top: 15px;
+      }
       &:hover{
         cursor: pointer;
       }
