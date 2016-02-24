@@ -82,30 +82,27 @@ section#missions {
         }
         .card-infos{
           background-color: $gray-b;
+          padding-top: 20px;
           margin-top: -6px;
           margin-left: 51px;
-          height: 111px;
+          height: 91px;
           width: 392px;
           .infos-list{
-            display: none;
             @include fontAvenir();
-            margin-top: 22px;
-            width: 208px;
-            position: absolute;
-            color: $white;
             font-size: 13px;
-            text-align: right;
-            list-style-type: none;
-            .info-name{
-              float:left;
-              display: inline;
+            .left{
               color: $gray-l;
+              float: left;
+              clear: none;
               text-align: right;
+              margin-left: 80px;
             }
-            .info-value{
-              display: inline;
+            .right{
+              color: white;
+              display: inline-block;
               text-align: left;
-              margin-left: 40px;
+              margin-left: 20px;
+              top: 20px;
             }
           }
         }
