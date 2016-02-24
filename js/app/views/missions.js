@@ -190,8 +190,12 @@ Missions.prototype.video = function() {
     var video = $('#video-mission video')[0];
     var sound = $('#video-mission .sound')[0];
     var warning = $('#warning-imminent');
+    var crosshair = $('#weapon .weapon-center svg')[0];
 
     cta.on('click', function() {
+
+        crosshair.style.fill = '#d62b2b';
+
         container.fadeIn(function() {
             video.play();
             setTimeout(function() {
@@ -203,6 +207,7 @@ Missions.prototype.video = function() {
     video.onended = function() {
         container.fadeOut(function() {
             video.currentTime = 0;
+            crosshair.style.fill = '#ada8ae';
         });
         warning.fadeOut();
     }
