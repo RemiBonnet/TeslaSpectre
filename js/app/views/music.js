@@ -154,6 +154,7 @@ Music.prototype.writeSpectrumVideoDuration = function() {
 Music.prototype.call = function() {
     var container = $('#call');
     var video = $('#call #modal video')[0];
+    var ring = $('#call #modal video')[1];
     var time = $('#call #modal .time');
     var minute = $('#call #modal .time .minute');
     var second = $('#call #modal .time .second');
@@ -164,12 +165,14 @@ Music.prototype.call = function() {
 
     $(document).keydown(function(e){
         if(e.keyCode == 67) {
+            ring.play();
             video.play();
             container.fadeIn();
         }
     });
 
     decline.on('click', function(){
+        ring.pause();
         container.fadeOut(function(){
             minuteCount = 0;
             secondCount = 0;
@@ -201,7 +204,7 @@ Music.prototype.call = function() {
     });
 
     accept.on('click', function(){
-
+        ring.pause();
         accept.velocity({
             opacity: [0, 1],
             translateX: [100, 0]
