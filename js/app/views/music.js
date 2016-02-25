@@ -173,6 +173,7 @@ Music.prototype.call = function() {
 
     decline.on('click', function(){
         ring.pause();
+        ring.currentTime = 0;
         container.fadeOut(function(){
             minuteCount = 0;
             secondCount = 0;
@@ -205,6 +206,7 @@ Music.prototype.call = function() {
 
     accept.on('click', function(){
         ring.pause();
+        ring.currentTime = 0;
         accept.velocity({
             opacity: [0, 1],
             translateX: [100, 0]
