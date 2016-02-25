@@ -5,27 +5,42 @@ section#experience{
 		padding-left: 20px;
 		padding-right: 20px;
 		padding-top: 26px;
-		div#map {
- 			width: 1160px;
-            height: 370px;
-            display: none;
-            div.gmnoprint {
-            	display: none;
-            }
-			a[href^="http://maps.google.com/maps"]{display:none !important}
-			a[href^="https://maps.google.com/maps"]{display:none !important}
-			.gmnoprint a, .gmnoprint span, .gm-style-cc {
-			    display:none;
+		div.map {
+			overflow: auto;
+			max-width: 1160px;
+			max-height: 370px;
+			&::-webkit-scrollbar {
+				display: none;
 			}
-			.gmnoprint div {
-			    background:none !important;
+			div.screen {
+				position: relative;
+				height: 2000px;
+				width: 2000px;
+				background-image: url("/assets/img/missions/map_missions.png");
+				background-repeat: repeat;
 			}
 		}
+		// div#map {
+ 	// 		width: 1160px;
+  //           height: 370px;
+  //           display: none;
+  //           div.gmnoprint {
+  //           	display: none;
+  //           }
+		// 	a[href^="http://maps.google.com/maps"]{display:none !important}
+		// 	a[href^="https://maps.google.com/maps"]{display:none !important}
+		// 	.gmnoprint a, .gmnoprint span, .gm-style-cc {
+		// 	    display:none;
+		// 	}
+		// 	.gmnoprint div {
+		// 	    background:none !important;
+		// 	}
+		// }
 		div.dot {
 			display: none;
 			position: absolute;
 			left: 572px;
-			top: 300px;
+			top: 190px;
 			background-color: rgba(248, 155, 0, 0.8);
 			width: 70px;
 			height: 70px;

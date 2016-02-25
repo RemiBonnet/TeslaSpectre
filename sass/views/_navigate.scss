@@ -77,27 +77,28 @@ section#navigate {
 				}
 			}
 		}
-		div#mapsNavigate {
-			float: right;
-			width: 1065px;
-	        height: 590px;
-	        margin-right: 20px;
-	        div.gmnoprint {
-	        	display: none;
-	        }
-			a[href^="http://maps.google.com/maps"]{display:none !important}
-			a[href^="https://maps.google.com/maps"]{display:none !important}
-			.gmnoprint a, .gmnoprint span, .gm-style-cc {
-			    display:none;
+		div.map {
+			position: absolute;
+			right: 20px;
+			overflow: auto;
+			max-width: 1065px;
+			max-height: 590px;
+			&::-webkit-scrollbar {
+				display: none;
 			}
-			.gmnoprint div {
-			    background:none !important;
+			div.screen {
+				position: relative;
+				height: 2000px;
+				width: 2000px;
+				background-image: url("../assets/img/nav/map_nav.png");
+				background-repeat: repeat;
 			}
 		}
 		div.dot {
+			display: none;
 			position: absolute;
-			left: 700px;
-			top:500px;
+			left: 600px;
+			top:450px;
 			background-color: rgba(248, 155, 0, 0.8);
 			width: 70px;
 			height: 70px;
@@ -274,8 +275,8 @@ section#navigate {
 		div.bottomNavigate {
 			display: none;
 			position: relative;
-			top: 10px;
-			left: 95px;
+			top: 600px;
+			left: 35px;
 			a {
 				line-height: 45px;
 				display: inline-block;
