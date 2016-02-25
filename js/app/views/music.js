@@ -9,6 +9,12 @@ Music.prototype = Object.create(View.prototype);
 
 Music.prototype.bind = function() {
     View.prototype.bind.call(this);
+
+    if (this.container.find('#call').length == 0) {
+        var callDom = app.template('call');
+        this.container.append(callDom);
+    }
+
     this.call();
 
     this.play.on('click', $.proxy(this.onPlayClick, this));
@@ -152,7 +158,9 @@ Music.prototype.writeSpectrumVideoDuration = function() {
 };
 
 Music.prototype.call = function() {
-    var container = $('#call');
+    var self = this;
+
+    var container = this.container.find('#call');
     var video = $('#call #modal video')[0];
     var ring = $('#call #modal video')[1];
     var time = $('#call #modal .time');
@@ -165,8 +173,8 @@ Music.prototype.call = function() {
 
     $(document).keydown(function(e){
         if(e.keyCode == 67) {
+            self.spectrumVideo[0].pause();
             ring.play();
-            video.play();
             container.fadeIn();
         }
     });

@@ -1,4 +1,7 @@
 section#music{
+  clear: both;
+  height: 850px;
+
   #title {
     margin: 0 0 15px 20px;
     padding-top: 50px;
@@ -314,6 +317,9 @@ article#call{
   color: $white;
   display: none;
   div#modal{
+    position: relative;
+    top: 200px;
+    z-index: 10000;
     video {
       display: block;
       margin: 0 auto;

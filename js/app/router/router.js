@@ -48,6 +48,8 @@ Router.prototype.createRoutes = function() {
 		self._onNavigate.dispatch({
 			view: 'home'
 		});
+
+        console.log( '## Navigate view home' );
 	});
 
     // Experience
@@ -56,6 +58,8 @@ Router.prototype.createRoutes = function() {
         self._onNavigate.dispatch({
             view: 'experience'
         });
+
+        console.log( '## Navigate view experience' );
     });
 
     // Music
@@ -64,6 +68,8 @@ Router.prototype.createRoutes = function() {
         self._onNavigate.dispatch({
             view: 'music'
         });
+
+        console.log( '## Navigate view music' );
     });
 
     // Music
@@ -72,6 +78,8 @@ Router.prototype.createRoutes = function() {
         self._onNavigate.dispatch({
             view: 'contact'
         });
+
+        console.log( '## Navigate view contact' );
     });
 
     // Navigate

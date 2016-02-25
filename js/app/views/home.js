@@ -80,3 +80,7 @@ Home.prototype.animateText = function() {
 Home.prototype.refreshHello = function() {
     document.cookie = 'helloplayed=0';
 };
+
+Home.prototype.onAnimateIn = function() {
+    View.prototype.onAnimateIn.call(this);
+};
