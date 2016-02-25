@@ -8,7 +8,7 @@ var Navigate = function(){
 Navigate.prototype = Object.create(View.prototype);
 
 Navigate.prototype.bind = function() {
-	this.mapsNavigate();
+	// this.mapsNavigate();
 };
 
 Navigate.prototype.animateIn = function() {

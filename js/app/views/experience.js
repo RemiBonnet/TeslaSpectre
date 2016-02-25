@@ -8,7 +8,7 @@ var Experience = function(){
 Experience.prototype = Object.create(View.prototype);
 
 Experience.prototype.bind = function() {
-	this.maps();
+	// this.maps();
     this.incDec();
     this.activeToggle();
     this.hello();
