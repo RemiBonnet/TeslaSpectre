@@ -14,8 +14,8 @@ section#navigate {
 		    }
 		}
 		div.leftNavigate {
-			float: left;
 			display: none;
+			float: left;
 			div.first {
 				background-color: $gray-r;
 				width: 80px;
@@ -129,7 +129,7 @@ section#navigate {
 			background-color: $gray-r;
 			width: 300px;
 			height: 400px;
-			display: none;
+			display: block;
 			div.top {
 				display: block;
 				text-align: center;

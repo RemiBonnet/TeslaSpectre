@@ -70,14 +70,6 @@ Navigate.prototype.onAnimateIn = function() {
 
 Navigate.prototype.velocity = function(){
 
-    $(".blocLeft").velocity({
-        opacity: [1, 0.5],
-        translateX: [0, -100],
-    }, {
-        duration: 300,
-        delay: 1000,
-        display: 'inline',
-    });
     $(".leftNavigate").velocity({
         opacity: [1, 0.5],
         translateX: [0, -100],
