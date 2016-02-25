@@ -9,6 +9,7 @@ Music.prototype = Object.create(View.prototype);
 
 Music.prototype.bind = function() {
     View.prototype.bind.call(this);
+    this.velocity();
 
     if (this.container.find('#call').length == 0) {
         var callDom = app.template('call');
@@ -33,31 +34,6 @@ Music.prototype.animateIn = function() {
 	this.domElem.fadeIn(function(){
 		self.onAnimateIn();
 	});
-
-    $("#left").velocity({
-        opacity: [1, 0],
-        translateX: [0, -100],
-    }, {
-        duration: 300,
-        delay: 500,
-        display: 'inline-block',
-    });
-    $("#center .player").velocity({
-        opacity: [1, 0],
-    }, {
-        duration: 1000,
-        delay: 900,
-        display: 'block',
-    });
-    $("#center .disclamer").velocity({
-        opacity: [1, 0],
-        translateX: [0, -100],
-    }, {
-        duration: 600,
-        delay: 1200,
-        display: 'block',
-    });
-
 };
 
 Music.prototype.animateOut = function() {
@@ -259,4 +235,35 @@ Music.prototype.call = function() {
             minute.html(minuteCount);
         }, 1000);
     });
+}
+
+Music.prototype.velocity = function(){
+    var left = this.domElem.find('#left');
+    var center = this.domElem.find('#center');
+
+    left.velocity({
+        opacity: [1, 0],
+        translateX: [0, -100],
+    }, {
+        duration: 300,
+        delay: 500,
+        display: 'inline-block',
+    });
+    center.find('.player').velocity({
+        opacity: [1, 0],
+    }, {
+        duration: 1000,
+        delay: 900,
+        display: 'block',
+    });
+    center.find('.disclamer').velocity({
+        opacity: [1, 0],
+        translateX: [0, -100],
+    }, {
+        duration: 600,
+        delay: 1200,
+        display: 'block',
+    });
+
+
 }
