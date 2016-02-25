@@ -20,22 +20,6 @@ section#experience{
 				background-repeat: repeat;
 			}
 		}
-		// div#map {
- 	// 		width: 1160px;
-  //           height: 370px;
-  //           display: none;
-  //           div.gmnoprint {
-  //           	display: none;
-  //           }
-		// 	a[href^="http://maps.google.com/maps"]{display:none !important}
-		// 	a[href^="https://maps.google.com/maps"]{display:none !important}
-		// 	.gmnoprint a, .gmnoprint span, .gm-style-cc {
-		// 	    display:none;
-		// 	}
-		// 	.gmnoprint div {
-		// 	    background:none !important;
-		// 	}
-		// }
 		div.dot {
 			display: none;
 			position: absolute;
@@ -592,6 +576,7 @@ section#experience{
 						top: 0px;
 					}
 					p.numberLeft {
+						margin-top: 2px;
 						padding-left: 10px;
 						margin-top: 8px;
 						width: 60%;
@@ -639,7 +624,7 @@ section#experience{
 						text-align: center;
 						@include fontBrandonLight();
 						height:50px;
-						line-height: 80px;
+						line-height: 75px;
 						padding: 0px;
 						color: $gray-m;
 						font-size: 50pt;
@@ -683,6 +668,7 @@ section#experience{
 					background-color: $gray-b;
 					height: 108px;
 					p.numberLeft {
+						margin-top: 2px;
 						padding-left: 10px;
 						margin-top: 8px;
 						width: 60%;
@@ -731,7 +717,7 @@ section#experience{
 						text-align: center;
 						@include fontBrandonLight();
 						height:50px;
-						line-height: 80px;
+						line-height: 75px;
 						padding: 0px;
 						color: $gray-m;
 						font-size: 50pt;
