@@ -151,6 +151,7 @@ Music.prototype.call = function() {
         if(e.keyCode == 67) {
             self.spectrumVideo[0].pause();
             ring.play();
+            video.play();
             container.fadeIn();
         }
     });
