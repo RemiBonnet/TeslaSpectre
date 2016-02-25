@@ -22,13 +22,13 @@ header{
 		 	&.gps, &.eco, &.web, &.phone {
 				svg {
 					text-align:center;
-					fill: $gray-m;
+					fill: $gray-m !important;
 					padding-bottom: 30px;
 				}
 			}
 			&.exp {
 				svg {
-					fill: $gray-l;
+					fill: $gray-m !important;
 					padding-bottom: 30px;
 				}
 			}
@@ -44,15 +44,13 @@ header{
 				width:244px;
 				svg {
 					overflow: hidden;
-					fill: $gray-l;
+					fill: $gray-l !important;
 					padding-bottom: 10px;
 
 					-webkit-filter: drop-shadow( 0px 0px 30px $gray-l );
             		filter: drop-shadow( 0px 0px 30px $gray-l );
-				}
-				&:active {
-					svg {
-						fill: $gray-l;
+            		g {
+            			fill: $gray-l;
 					}
 				}
 			}
