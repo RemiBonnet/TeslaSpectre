@@ -18,22 +18,22 @@ var ViewController = function(){
 
 // Init views
 ViewController.prototype.init = function() {
-	
+
 	// Create all views
 	this.views = {
-		'home': new Home(),
-		'experience': new Experience(),
+        'home': new Home(),
+        'experience': new Experience(),
         'missions': new Missions(),
-		'music': new Music(),
-		'navigate': new Navigate(),
-		'contact': new Contact()
+        'music': new Music(),
+        'navigate': new Navigate(),
+        'contact': new Contact()
 	};
 
 };
 
 // Bind
 ViewController.prototype.bind = function() {
-	
+
 	// Listen to the router for navigate event
 	app.router._onNavigate.add( this.onNavigate, this );
 
@@ -41,7 +41,7 @@ ViewController.prototype.bind = function() {
 
 // On navigate
 ViewController.prototype.onNavigate = function(e) {
-	
+
 	var view = e.view;
 
 	console.log('## VC Navigate >> ', e);
@@ -66,22 +66,6 @@ ViewController.prototype.goTo = function( nextView ) {
 	// Save next view
 	this.nextView = nextView;
 
-	// If next view is not loaded yet
-	if ( !this.nextView.loaded ){
-
-		// Listen to on view load complete event
-		this.nextView._onViewLoadComplete.add( this.onViewLoadComplete, this );
-
-		// Load next view
-		this.nextView.load();
-
-		return;
-
-	}
-
-	// Remove on view load complete listener
-	this.nextView._onViewLoadComplete.remove( this.onViewLoadComplete, this );
-
 	// If it's the first view to be shown
 	if ( this.currentView == null ){
 
@@ -92,10 +76,7 @@ ViewController.prototype.goTo = function( nextView ) {
 		this.nextView.animateIn();
 
 		// Dispatch navigation event
-		this._onNavigate.dispatch({
-			from: null,
-			to: this.nextView
-		});
+		this._onNavigate.dispatch();
 
 		// Save prev view
 		this.prevView = this.currentView;
@@ -111,22 +92,29 @@ ViewController.prototype.goTo = function( nextView ) {
 	} else {
 
 		// Animate out current view
-		this.currentView.animateOut( this.nextView );
+		//this.currentView.animateOut( this.nextView );
+
+        if (
+            $.inArray(this.nextView.id, this.nextView.viewsFullPage) != -1 ||
+            $.inArray(this.currentView.id, this.nextView.viewsFullPage) != -1
+        ) {
+            this.currentView.animateOut();
+        }
+
+        if (this.prevView != null) {
+            this.prevView.animateOut();
+        }
+
+        this.prevView = this.currentView;
 
 		// Listen to onAnimateIn event
 		this.nextView._onAnimateIn.add( this.onViewAnimateIn, this );
 
 		// Animate in next view
-		this.nextView.animateIn( this.currentView );
-		
-		// Dispatch navigation event
-		this._onNavigate.dispatch({
-			from: this.currentView,
-			to: this.nextView
-		});
+		this.nextView.animateIn();
 
-		// Save prev view
-		this.prevView = this.currentView;
+		// Dispatch navigation event
+		this._onNavigate.dispatch();
 
 		// Save new current view
 		this.currentView = this.nextView;
@@ -139,7 +127,6 @@ ViewController.prototype.goTo = function( nextView ) {
 };
 
 ViewController.prototype.onViewLoadComplete = function(e) {
-	
 	this.nextView._onViewLoadComplete.remove( this.onViewLoadComplete );
 
 	this._onViewLoadComplete.dispatch(e);
@@ -150,8 +137,8 @@ ViewController.prototype.onViewLoadComplete = function(e) {
 
 	}
 
-	this.goTo( this.nextView );	
-	
+	this.goTo( this.nextView );
+
 };
 
 // Once next view has been animated in
@@ -159,6 +146,7 @@ ViewController.prototype.onViewAnimateIn = function() {
 
 	// Remove listener
 	this.currentView._onAnimateIn.remove( this.onViewAnimateIn, this );
+    this.currentView.domElem.attr('attr-id', Math.random());
 
 	// Set not busy anymore
 	this.isBusy = false;
@@ -170,7 +158,7 @@ ViewController.prototype.onViewAnimateIn = function() {
 
 // Bind navigation links
 ViewController.prototype.bindNavLinks = function() {
-	
+
 	$('a').not('[target="_blank"]').off('click').on('click', $.proxy(this.onNavLinkClick, this));
 
 };
@@ -185,9 +173,9 @@ ViewController.prototype.onNavLinkClick = function(e) {
 	var url = $(e.currentTarget).attr('href');
 
 	// If navigation is not busy and url is a valid link
-	if ( !this.isBusy && url != '#' ){
-	
-		// Navigate to the new url		
+	if ( url != '#' ){
+
+		// Navigate to the new url
 		app.router.navigate( url );
 
 	}

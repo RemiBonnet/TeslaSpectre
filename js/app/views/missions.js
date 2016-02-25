@@ -211,6 +211,10 @@ Missions.prototype.video = function() {
         });
         warning.fadeOut();
     }
-}
+};
+
+Missions.prototype.onAnimateIn = function() {
+    View.prototype.onAnimateIn.call(this);
+};
 
 

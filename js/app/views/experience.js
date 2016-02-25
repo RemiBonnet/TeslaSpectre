@@ -223,3 +223,7 @@ Experience.prototype.hello = function() {
         if (parts.length == 2) return parts.pop().split(";").shift();
     }
 };
+
+Experience.prototype.onAnimateIn = function() {
+  View.prototype.onAnimateIn.call(this);
+};

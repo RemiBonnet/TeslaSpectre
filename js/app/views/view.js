@@ -29,6 +29,11 @@ var View = function(){
         'loader',
     ];
 
+    this.viewsFullPage = [
+      'experience',
+      'missions',
+    ];
+
 	// Init view
 	this.init();
 
@@ -50,29 +55,7 @@ View.prototype.template = function() {
 
 // Load view
 View.prototype.load = function() {
-	
-	// If there is something to load
-	if ( app.getObjectLength( this.images ) > 0 ){
-
-		// Create loader
-		this.loader = new Loader();
-
-		// Listen to onComplete event
-		this.loader._onComplete.add( this.onLoadComplete, this );
-
-		// Add images to the queue
-		this.loader.addImages( this.images );
-
-		// Start loader
-		this.loader.start();
-
-	} else {
-
-		// If nothing to load we go directly to onLoadComplete
-		this.onLoadComplete();
-
-	}
-
+    this.onLoadComplete();
 };
 
 // Once the view is loaded
@@ -91,7 +74,7 @@ View.prototype.onLoadComplete = function() {
 
 // Animate view in
 View.prototype.animateIn = function() {
-	
+
 	// Remove on view load complete event
 	this._onViewLoadComplete.remove( this.animateIn, this );
 

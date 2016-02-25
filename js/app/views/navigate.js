@@ -113,3 +113,6 @@ Navigate.prototype.mapsNavigate = function() {
     });
 };
 
+Navigate.prototype.onAnimateIn = function() {
+    View.prototype.onAnimateIn.call(this);
+};
