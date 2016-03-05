@@ -1,16 +1,22 @@
 # Tesla Project
+	
+	Redesign dashboard Tesla with design inspired by spectre movie.
+	
+	Demo : http://tesla-project.fr/
+	Resize your screen to the size of a dashboard Tesla : 1200(w) x 1920(h)
 
-Redesign dashboard Tesla with spectre movie. 
+#### Team :
+	
+	| Name  |  Role|
+	| ------------- | ------------- |
+	| Eden BITTON  | Manager |
+	| Lucas BIGOT  | Designer |
+	| Mortimer CORNET  | Designer |
+	| Matthieu TOURDES  | Designer  |
+	| Mathieu ROBERT  | Developper  |
+	| Baptiste LAMBERT  | Developer  |
+	| Rémi BONNET  | Designer & Developer  |
 
-## Team
-- Eden Bitton
-- Lucas Bigot
-- Mortimer Cornet
-- Matthieu Tourdes
-- Mathieu Robert
-- Baptiste Lambert
-- Rémi Bonnet
 
-
-# Install
-- (sudo) npm install
+#### Install :
+	(sudo) npm install
