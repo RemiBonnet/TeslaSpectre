@@ -14,10 +14,10 @@ Resize your screen to the size of a dashboard Tesla : 1200(w) x 1920(h)
 | Lucas BIGOT  | Designer |
 | Mortimer CORNET  | Designer |
 | Matthieu TOURDES  | Designer  |
-| Mathieu ROBERT  | Developper  |
+| Mathieu ROBERT  | Developer  |
 | Baptiste LAMBERT  | Developer  |
 | Rémi BONNET  | Designer & Developer  |
 
 
 #### Install :
-(sudo) npm install
+	(sudo) npm install
