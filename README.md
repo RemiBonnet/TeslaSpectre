@@ -2,7 +2,6 @@
 	
 Redesign dashboard Tesla with design inspired by spectre movie.
 	
-Demo : http://tesla-project.fr/  
 Resize your screen to the size of a dashboard Tesla : 1200(w) x 1920(h)
 
 
